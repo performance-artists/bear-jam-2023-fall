@@ -1,14 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=3 format=3 uid="uid://c0sq34vnj0wvy"]
 
-[ext_resource type="PackedScene" uid="uid://6rlgplhe22ft" path="res://Character/Player.tscn" id="1_b1g43"]
+[ext_resource type="Material" uid="uid://byjko3fmap38j" path="res://Materials/Floor_Material.tres" id="1_pjqnh"]
+[ext_resource type="PackedScene" uid="uid://gudaru4h2toy" path="res://Player/Player.tscn" id="2_343l5"]
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node3D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_b1g43")]
-position = Vector2(0, -6)
+[node name="Map" type="Node3D" parent="."]
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 26.0
-offset_top = -30.0
-offset_right = 66.0
-offset_bottom = 10.0
+[node name="CSGBox3D" type="CSGBox3D" parent="Map"]
+material_override = ExtResource("1_pjqnh")
+use_collision = true
+size = Vector3(5.0841, 0.0836785, 6.09444)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_343l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.127238, 0.0270053, 0.0522305)
