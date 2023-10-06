@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696521400
+::res://::1696564452
 icon.svg::CompressedTexture2D::6599220742248669903::1696510282::1696521089::1::::<><>::
-::res://Materials/::1696521433
-Floor_Material.tres::StandardMaterial3D::4090165980758423699::1696521433::0::1::::<><>::
+::res://Materials/::1696521672
+Floor_Material.tres::StandardMaterial3D::4090165980758423699::1696521672::0::1::::<><>::uid://r3pf6islxmlb::::res://RPG_assets-main/textures/Dark/texture_01.png
+::res://Player/::1696523144
+Player.tscn::PackedScene::462603693008795304::1696523144::0::1::::<><>::res://Scripts/Player.gd
 ::res://RPG_assets-main/::1696521231
 ::res://RPG_assets-main/models/::1696521215
 player.glb::PackedScene::5176964292752856159::1696521193::1696521215::1::::<><>::
@@ -94,5 +96,7 @@ texture_10.png::CompressedTexture2D::1524471703986852495::1696521195::1696521213
 texture_11.png::CompressedTexture2D::6392889043534814842::1696521195::1696521213::1::::<><>::
 texture_12.png::CompressedTexture2D::2031228104600713546::1696521195::1696521213::1::::<><>::
 texture_13.png::CompressedTexture2D::5589346243262325597::1696521195::1696521213::1::::<><>::
-::res://Scenes/::1696521305
-Game.tscn::PackedScene::6565744288245431410::1696521305::0::1::::<><>::uid://cf0030papqet0::::res://RPG_assets-main/models/player.glb
+::res://Scenes/::1696523143
+Game.tscn::PackedScene::6565744288245431410::1696523143::0::1::::<><>::uid://byjko3fmap38j::::res://Materials/Floor_Material.tres<>uid://gudaru4h2toy::::res://Player/Player.tscn
+::res://Scripts/::1696523081
+Player.gd::GDScript::-1::1696523081::0::1::::<>CharacterBody3D<>::
