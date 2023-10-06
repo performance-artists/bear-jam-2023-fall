@@ -1,0 +1,79 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bn2iqtw36wwwo"
+path="res://.godot/imported/Character Animated.glb-7ea403027f89083555ae8d4a2397cd1b.scn"
+
+[deps]
+
+source_file="res://Player/Character Animated.glb"
+dest_files=["res://.godot/imported/Character Animated.glb-7ea403027f89083555ae8d4a2397cd1b.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Boots": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Boots.tres"
+},
+"Detail": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Detail.tres"
+},
+"Eye": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Eye.tres"
+},
+"Hair": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Hair.tres"
+},
+"Material.006": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Material.006.tres"
+},
+"Pants": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Pants.tres"
+},
+"Pupil": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Pupil.tres"
+},
+"Shirt": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Shirt.tres"
+},
+"Skin": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/Skin.tres"
+},
+"UnderShirt": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/UnderShirt.tres"
+},
+"White": {
+"use_external/enabled": true,
+"use_external/path": "res://Player/White.tres"
+}
+}
+}
+gltf/embedded_image_handling=1
