@@ -7385,7 +7385,7 @@ bones/42/rotation = Quaternion(5.29396e-23, 1.58819e-22, 0, 1)
 bones/42/scale = Vector3(1, 1, 1)
 
 [node name="NurbsPath_001" type="BoneAttachment3D" parent="Visual/Player/RootNode/CharacterArmature/Skeleton3D"]
-transform = Transform3D(1, 2.83657e-10, 9.14908e-13, -2.20846e-10, 0.993698, -0.112087, -2.44456e-11, 0.112087, 0.993698, -9.09495e-13, 0.00154414, -0.000145124)
+transform = Transform3D(1, 2.91038e-10, 9.32543e-13, -2.32831e-10, 0.993698, -0.112087, -2.18279e-11, 0.112087, 0.993698, -9.09495e-13, 0.00154414, -0.000145124)
 bone_name = "NurbsPath.001"
 bone_idx = 9
 

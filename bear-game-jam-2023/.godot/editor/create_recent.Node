@@ -1,7 +1,12 @@
-OmniLight3D
 Node3D
-Camera3D
+Node
+WorldEnvironment
 AnimationPlayer
+DirectionalLight3D
+Node2D
+Label
+OmniLight3D
+Camera3D
 CollisionShape3D
 CharacterBody3D
 CSGBox3D
