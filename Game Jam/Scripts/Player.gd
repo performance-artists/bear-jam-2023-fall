@@ -7,7 +7,7 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-@onready var animation_player = $Visual/player/AnimationPlayer
+@onready var animation_player = $Visual/Player/AnimationPlayer
 @onready var visual = $Visual
 
 var walking = false
@@ -35,10 +35,10 @@ func _physics_process(delta):
 		
 		if Input.is_key_pressed(KEY_SHIFT):
 			SPEED = 10.0
-			animation_player.play("run")
+			animation_player.play("Run")
 		else:
 			SPEED = 5.0
-			animation_player.play("walk")
+			animation_player.play("Walk")
 			
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -46,6 +46,6 @@ func _physics_process(delta):
 		
 		if walking:
 			walking = false
-			animation_player.play("idle")
+			animation_player.play("Idle")
 
 	move_and_slide()

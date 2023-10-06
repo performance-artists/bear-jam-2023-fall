@@ -1,4 +1,4 @@
-res://Scenes/Game.tscn
-res://Materials/Floor_Material.tres
 res://Player/Player.tscn
+res://Materials/Floor_Material.tres
 res://Scripts/Player.gd
+res://Scenes/Game.tscn
