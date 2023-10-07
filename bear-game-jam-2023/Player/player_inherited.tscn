@@ -1,5 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwqqhilpncr2j"]
 
-[ext_resource type="PackedScene" uid="uid://cf0030papqet0" path="res://RPG_assets-main/models/player.glb" id="1_45qnu"]
+[ext_resource type="PackedScene" uid="uid://cf0030papqet0" path="res://Assets/RPG_assets-main/models/player.glb" id="1_45qnu"]
+
 
 [node name="player" instance=ExtResource("1_45qnu")]
