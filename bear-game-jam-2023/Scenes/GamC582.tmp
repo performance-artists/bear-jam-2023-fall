@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0sq34vnj0wvy"]
+
+[ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
+[ext_resource type="PackedScene" uid="uid://gudaru4h2toy" path="res://Player/Player.tscn" id="2_343l5"]
+[ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
+[ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="4_w71t3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndtst"]
+albedo_texture = ExtResource("2_nyp06")
+
+[sub_resource type="FontFile" id="FontFile_7hw81"]
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufxtg"]
+
+[sub_resource type="Sky" id="Sky_2y5xi"]
+
+[sub_resource type="Environment" id="Environment_q8sut"]
+background_mode = 1
+background_color = Color(0.431373, 0.72549, 1, 1)
+sky = SubResource("Sky_2y5xi")
+ambient_light_color = Color(0.398272, 0.802632, 1, 1)
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_wvy54")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Map"]
+material_override = SubResource("StandardMaterial3D_ndtst")
+use_collision = true
+size = Vector3(100, 0.001, 100)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_343l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.127238, 0.0270053, 0.0522305)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="XP" type="Label" parent="UI"]
+offset_left = 15.0
+offset_top = 484.0
+offset_right = 281.0
+offset_bottom = 634.0
+theme_override_fonts/font = SubResource("FontFile_7hw81")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ufxtg")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_w71t3")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000302315, 0.0373955, -0.01507)
+light_energy = 2.0
+light_volumetric_fog_energy = 16.0
+light_angular_distance = 90.0
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_q8sut")
