@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696859853
+::res://::1697102940
 icon.svg::CompressedTexture2D::2962496335490461967::1696859261::1696859268::1::::<><>::
 ::res://Assets/::1696859843
 ::res://Assets/RPG_assets-main/::1696859843
@@ -97,14 +97,17 @@ texture_13.png::CompressedTexture2D::5589346243262325597::1696578972::1696859568
 FBX2glTF-License.txt::TextFile::-1::1696859395::0::1::::<><>::
 ::res://Materials/::1696859843
 Floor_Material.tres::StandardMaterial3D::4090165980758423699::1696858884::0::1::::<><>::uid://r3pf6islxmlb
-::res://Player/::1696859843
+::res://Player/::1697103570
 Character Animated.glb::PackedScene::3355129192235605106::1696579930::1696859510::1::::<><>::
 Character_Animated (1).fbx::PackedScene::710015567490365325::1696579832::1696859514::1::::<><>::
-Player.tscn::PackedScene::462603693008795304::1696859830::0::1::::<><>::res://Scripts/Player.gd
+CUNurbsPath.001.fbx::PackedScene::5994614002117457938::1697103560::1697103570::1::::<><>::
+Player.tscn::PackedScene::462603693008795304::1697103147::0::1::::<><>::res://Scripts/Player.gd
 player_inherited.tscn::PackedScene::3964589698115020259::1696670326::0::1::::<><>::uid://cf0030papqet0
-::res://Scenes/::1696859843
-Game.tscn::PackedScene::6565744288245431410::1696859823::0::1::::<><>::res://Scripts/XP.gd<>uid://gudaru4h2toy::::res://Player/Player.tscn<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd
-::res://Scripts/::1696859843
+_ncl1_29.000.fbx::::-1::1697103560::0::0::::<><>::
+_ncl1_29.008.fbx::::-1::1697103560::0::0::::<><>::
+::res://Scenes/::1697103147
+Game.tscn::PackedScene::6565744288245431410::1697103147::0::1::::<><>::res://Scripts/XP.gd<>uid://gudaru4h2toy::::res://Player/Player.tscn<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd
+::res://Scripts/::1697102967
 Player.gd::GDScript::-1::1696859724::0::1::::<>CharacterBody3D<>::
 ShowXP.gd::GDScript::-1::1696598197::0::1::::<>Label<>::
 XP.gd::GDScript::-1::1696598194::0::1::::<>Node3D<>::
