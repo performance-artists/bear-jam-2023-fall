@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b74v30f1o0wbm"
+path="res://.godot/imported/OpenBarn.obj-a9c42c38d60026f91d5b4ea5276d4b9d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/OpenBarn.obj-a9c42c38d60026f91d5b4ea5276d4b9d.mesh"]
+
+source_file="res://Assets/Farm2/OBJ/OpenBarn.obj"
+dest_files=["res://.godot/imported/OpenBarn.obj-a9c42c38d60026f91d5b4ea5276d4b9d.mesh", "res://.godot/imported/OpenBarn.obj-a9c42c38d60026f91d5b4ea5276d4b9d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

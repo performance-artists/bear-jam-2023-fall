@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bic21rq8vabq6"
+path="res://.godot/imported/WaterTower.obj-751f91475f1752a324cc28d5a5097da4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WaterTower.obj-751f91475f1752a324cc28d5a5097da4.mesh"]
+
+source_file="res://Assets/Farm2/OBJ/WaterTower.obj"
+dest_files=["res://.godot/imported/WaterTower.obj-751f91475f1752a324cc28d5a5097da4.mesh", "res://.godot/imported/WaterTower.obj-751f91475f1752a324cc28d5a5097da4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
