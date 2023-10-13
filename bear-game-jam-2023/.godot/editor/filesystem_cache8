@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697104598
+::res://::1697187839
 icon.svg::CompressedTexture2D::2962496335490461967::1696859261::1696859268::1::::<><>::
 ::res://Assets/::1697104661
 ::res://Assets/Farm/::1697104644
@@ -28,10 +28,10 @@ WateringCan_01-c1c9b2b5f97b13f1915a7b06247efd47_Texture_01.png::CompressedTextur
 WateringCan_01.fbx::PackedScene::7717907414416401378::1697104635::1697104642::1::::<><>::uid://cywbl7pfh0eiu
 WateringCan_02-05da49ad01c5f8bd979a2326583d7e39_Texture_01.png::CompressedTexture2D::6502871990170804556::1697104642::1697104644::1::::<><>::
 WateringCan_02.fbx::PackedScene::7717907414416401378::1697104635::1697104642::0::::<><>::
-::res://Assets/Farm2/::1697104667
+::res://Assets/Farm2/::1697104668
 Preview.png::CompressedTexture2D::6139340765966866077::1697104666::1697104668::1::::<><>::
 ::res://Assets/Farm2/Blend/::1697104666
-::res://Assets/Farm2/FBX/::1697104667
+::res://Assets/Farm2/FBX/::1697104674
 Barn.fbx::PackedScene::3846038645007467259::1697104667::1697104674::1::::<><>::
 BigBarn.fbx::PackedScene::8459164998794741871::1697104667::1697104673::1::::<><>::
 ChickenCoop.fbx::PackedScene::6288793007391235125::1697104667::1697104673::1::::<><>::
@@ -45,7 +45,7 @@ TowerWindmill.fbx::PackedScene::3661262744178993895::1697104667::1697104670::1::
 WaterTower.fbx::PackedScene::1984328016712067212::1697104667::1697104670::1::::<><>::
 Well.fbx::PackedScene::2610987282613821304::1697104667::1697104669::1::::<><>::
 Windmill.fbx::PackedScene::4146628342016714064::1697104667::1697104669::1::::<><>::
-::res://Assets/Farm2/OBJ/::1697104667
+::res://Assets/Farm2/OBJ/::1697104669
 Barn.obj::Mesh::7893547612527708424::1697104666::1697104669::1::::<><>::
 BigBarn.obj::Mesh::3059772987494881033::1697104666::1697104669::1::::<><>::
 ChickenCoop.obj::Mesh::4741837667213504244::1697104666::1697104669::1::::<><>::
@@ -154,13 +154,13 @@ texture_13.png::CompressedTexture2D::5589346243262325597::1696578972::1696859568
 FBX2glTF-License.txt::TextFile::-1::1696859395::0::1::::<><>::
 ::res://Materials/::1696859843
 Floor_Material.tres::StandardMaterial3D::4090165980758423699::1696858884::0::1::::<><>::uid://r3pf6islxmlb
-::res://Player/::1697104370
+::res://Player/::1697112684
 Character_Animated (1).fbx::PackedScene::710015567490365325::1696579832::1696859514::1::::<><>::
-Player.tscn::PackedScene::462603693008795304::1697104370::0::1::::<><>::res://Scripts/Player.gd
+Player.tscn::PackedScene::462603693008795304::1697112684::0::1::::<><>::res://Scripts/Player.gd
 player_inherited.tscn::PackedScene::3964589698115020259::1696670326::0::1::::<><>::uid://cf0030papqet0
-::res://Scenes/::1697104343
-Game.tscn::PackedScene::6565744288245431410::1697104343::0::1::::<><>::res://Scripts/XP.gd<>uid://gudaru4h2toy::::res://Player/Player.tscn<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd
-::res://Scripts/::1697104370
-Player.gd::GDScript::-1::1697104370::0::1::::<>CharacterBody3D<>::
+::res://Scenes/::1697112683
+Game.tscn::PackedScene::6565744288245431410::1697112683::0::1::::<><>::res://Scripts/XP.gd<>uid://gudaru4h2toy::::res://Player/Player.tscn<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd<>uid://dsrxhgv6xqrtv::::res://Assets/Farm2/FBX/BigBarn.fbx<>uid://cr674avuwxxsa::::res://Assets/Farm2/FBX/OpenBarn.fbx<>uid://bsfspyvj60o52::::res://Assets/Farm2/FBX/TowerWindmill.fbx<>uid://b0cwmlt5tjr17::::res://Assets/Farm2/FBX/Windmill.fbx<>uid://4ws8k1dv4vgm::::res://Assets/Farm2/FBX/Silo.fbx<>uid://cvulrclxr2aqn::::res://Assets/Farm2/FBX/ChickenCoop.fbx<>uid://bdg1txn7jrdl5::::res://Assets/Farm2/FBX/Well.fbx
+::res://Scripts/::1697112682
+Player.gd::GDScript::-1::1697112682::0::1::::<>CharacterBody3D<>::
 ShowXP.gd::GDScript::-1::1696598197::0::1::::<>Label<>::
 XP.gd::GDScript::-1::1696598194::0::1::::<>Node3D<>::

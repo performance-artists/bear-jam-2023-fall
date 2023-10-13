@@ -1,9 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=17 format=3 uid="uid://c0sq34vnj0wvy"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
 [ext_resource type="PackedScene" uid="uid://gudaru4h2toy" path="res://Player/Player.tscn" id="2_343l5"]
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="4_w71t3"]
+[ext_resource type="PackedScene" uid="uid://dsrxhgv6xqrtv" path="res://Assets/Farm2/FBX/BigBarn.fbx" id="5_op4hk"]
+[ext_resource type="PackedScene" uid="uid://cr674avuwxxsa" path="res://Assets/Farm2/FBX/OpenBarn.fbx" id="6_66c7k"]
+[ext_resource type="PackedScene" uid="uid://bsfspyvj60o52" path="res://Assets/Farm2/FBX/TowerWindmill.fbx" id="7_w4t51"]
+[ext_resource type="PackedScene" uid="uid://b0cwmlt5tjr17" path="res://Assets/Farm2/FBX/Windmill.fbx" id="8_jrp1k"]
+[ext_resource type="PackedScene" uid="uid://4ws8k1dv4vgm" path="res://Assets/Farm2/FBX/Silo.fbx" id="9_fishj"]
+[ext_resource type="PackedScene" uid="uid://cvulrclxr2aqn" path="res://Assets/Farm2/FBX/ChickenCoop.fbx" id="10_o38xk"]
+[ext_resource type="PackedScene" uid="uid://bdg1txn7jrdl5" path="res://Assets/Farm2/FBX/Well.fbx" id="11_astsc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndtst"]
 albedo_texture = ExtResource("2_nyp06")
@@ -71,3 +78,24 @@ light_angular_distance = 90.0
 environment = SubResource("Environment_q8sut")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_343l5")]
+
+[node name="BigBarn" parent="." instance=ExtResource("5_op4hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
+
+[node name="OpenBarn" parent="." instance=ExtResource("6_66c7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -13)
+
+[node name="TowerWindmill" parent="." instance=ExtResource("7_w4t51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -6)
+
+[node name="Windmill" parent="." instance=ExtResource("8_jrp1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -3)
+
+[node name="Silo" parent="." instance=ExtResource("9_fishj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+
+[node name="ChickenCoop" parent="." instance=ExtResource("10_o38xk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+
+[node name="Well" parent="." instance=ExtResource("11_astsc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)

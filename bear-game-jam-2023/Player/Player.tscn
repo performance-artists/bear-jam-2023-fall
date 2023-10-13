@@ -7444,6 +7444,7 @@ mesh = SubResource("ArrayMesh_vuq4r")
 skin = SubResource("Skin_cfuqy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Visual/Player"]
+autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_xilek")
 }
