@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 GlobalXP="*res://Scripts/XP.gd"
 GlobalTimer="*res://Scripts/Timer.gd"
 
+[dotnet]
+
+project/assembly_name="Bear Jam 2023"
+
 [input]
 
 ui_left={

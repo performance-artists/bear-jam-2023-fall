@@ -1,14 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://gudaru4h2toy"]
+[gd_scene load_steps=16 format=3 uid="uid://bymfhnfsqidp2"]
 
+[ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
-[ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="2_2pqyl"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4qr3e"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y3htr"]
+bounce = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r0821"]
+radius = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbdl1"]
 resource_name = "citybits_texture"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_2pqyl")
+albedo_texture = ExtResource("1_3qi1u")
 metallic = 0.4
 roughness = 0.229416
 
@@ -170,41 +174,49 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v75id")
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Car" type="RigidBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_y3htr")
+angular_damp = 10.0
 script = ExtResource("1_4iveb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.417588, 0, 0, 0, 0.366491, 0, 0, 0, 1, 0, 0.123195, 0)
-shape = SubResource("BoxShape3D_4qr3e")
+shape = SubResource("SphereShape3D_r0821")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, -5.58131e-08, 1.97068e-07, -9.98822e-08, 0.707107, 0.707107, -1.78814e-07, -0.707107, 0.707107, 0, 8, 5)
+[node name="CarMesh" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 
-[node name="car_taxi" type="Node3D" parent="."]
+[node name="RootNode" type="Node3D" parent="CarMesh"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.380638, 0)
 
-[node name="RootNode" type="Node3D" parent="car_taxi"]
-
-[node name="car_taxi" type="MeshInstance3D" parent="car_taxi/RootNode"]
+[node name="car_taxi" type="MeshInstance3D" parent="CarMesh/RootNode"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hft3f")
 skeleton = NodePath("")
 
-[node name="car_taxi_wheel_front_left" type="MeshInstance3D" parent="car_taxi/RootNode/car_taxi"]
+[node name="car_taxi_wheel_front_left" type="MeshInstance3D" parent="CarMesh/RootNode/car_taxi"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, 0.00176001, -0.00245419, 0.000112574)
 mesh = SubResource("ArrayMesh_ux2iv")
 skeleton = NodePath("")
 
-[node name="car_taxi_wheel_rear_left" type="MeshInstance3D" parent="car_taxi/RootNode/car_taxi"]
+[node name="car_taxi_wheel_rear_left" type="MeshInstance3D" parent="CarMesh/RootNode/car_taxi"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, 0.00176001, 0.00256164, 0.000112574)
 mesh = SubResource("ArrayMesh_kkbew")
 skeleton = NodePath("")
 
-[node name="car_taxi_wheel_front_right" type="MeshInstance3D" parent="car_taxi/RootNode/car_taxi"]
+[node name="car_taxi_wheel_front_right" type="MeshInstance3D" parent="CarMesh/RootNode/car_taxi"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, -0.00176001, -0.00245419, 0.000112574)
 mesh = SubResource("ArrayMesh_1oyu8")
 skeleton = NodePath("")
 
-[node name="car_taxi_wheel_rear_right" type="MeshInstance3D" parent="car_taxi/RootNode/car_taxi"]
+[node name="car_taxi_wheel_rear_right" type="MeshInstance3D" parent="CarMesh/RootNode/car_taxi"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, -0.00176001, 0.00256164, 0.000112574)
 mesh = SubResource("ArrayMesh_k4a15")
 skeleton = NodePath("")
+
+[node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.612372, 0.353553, 0, 0.5, 0.866025, -0.707107, -0.612372, 0.353553, 3, 6, 3)

@@ -1,3 +1,4 @@
 res://Scenes/Building_Test.tscn
 res://Player/Building.tscn
 res://Scripts/Building.gd
+res://Scripts/Player.gd
