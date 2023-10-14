@@ -1,6 +1,6 @@
 extends Node
 
-const DEFAULT_VALUE = 60
+const DEFAULT_VALUE = 10
 
 var value = DEFAULT_VALUE
 
