@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bymfhnfsqidp2"]
+[gd_scene load_steps=16 format=3 uid="uid://gudaru4h2toy"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]

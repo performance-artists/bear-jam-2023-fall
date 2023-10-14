@@ -25,7 +25,12 @@ func _physics_process(delta):
 	car_mesh.position = sphere_offset
 	#if ground_ray.is_colliding():
 	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
+	# Handle Jump.
 
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 func _process(delta):
 	#if not ground_ray.is_colliding():
 	#	return
