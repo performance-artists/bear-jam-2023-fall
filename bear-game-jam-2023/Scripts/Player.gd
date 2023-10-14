@@ -5,6 +5,7 @@ extends RigidBody3D
 @onready var ground_ray = $CarMesh/RayCast3D
 @onready var right_wheel = $CarMesh/RootNode/car_taxi/car_taxi_wheel_front_right
 @onready var left_wheel = $CarMesh/RootNode/car_taxi/car_taxi_wheel_front_left
+@onready var particle = $CarMesh/RootNode/car_taxi/Particle
 
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -25,12 +26,7 @@ func _physics_process(delta):
 	car_mesh.position = sphere_offset
 	#if ground_ray.is_colliding():
 	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
-	# Handle Jump.
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 func _process(delta):
 	#if not ground_ray.is_colliding():
 	#	return
@@ -38,6 +34,11 @@ func _process(delta):
 	turn_input = Input.get_axis("ui_right", "ui_left") * deg_to_rad(steering)
 	right_wheel.rotation.y = turn_input
 	left_wheel.rotation.y = turn_input
+	
+	if turn_input and abs(linear_velocity.x) > 0.2 and abs(linear_velocity.z) > 0.2:
+		particle.emitting = true
+	else:
+		particle.emitting = false
 	
 	# rotate car mesh
 	if linear_velocity.length() > turn_stop_limit:
