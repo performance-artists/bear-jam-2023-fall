@@ -71,6 +71,7 @@ environment = SubResource("Environment_6e46s")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -5.58132e-08, 1.97068e-07, 5.58132e-08, 1, 1.0999e-14, -1.97068e-07, 7.00126e-22, 1, 0, 1.42052, 3)
+current = true
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
