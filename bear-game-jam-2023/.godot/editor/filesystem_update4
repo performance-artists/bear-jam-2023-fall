@@ -1,4 +1,4 @@
-res://Scenes/Menu.tscn
+res://Player/Player.tscn
 res://Scripts/Player.gd
 res://Scenes/Game.tscn
 res://Scripts/ShowTimer.gd
@@ -7,6 +7,3 @@ res://Scenes/Nick.tscn
 res://Scripts/Building.gd
 res://Player/Building.tscn
 res://Player/cube.tscn
-res://Player/Cop.tscn
-res://Scenes/Nick.tscn
-res://Player/Player.tscn
