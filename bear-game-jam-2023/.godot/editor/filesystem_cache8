@@ -222,24 +222,27 @@ texture_10.png::CompressedTexture2D::1524471703986852495::1696578972::1696859568
 texture_11.png::CompressedTexture2D::6392889043534814842::1696578972::1696859568::1::::<><>::
 texture_12.png::CompressedTexture2D::2031228104600713546::1696578972::1696859568::1::::<><>::
 texture_13.png::CompressedTexture2D::5589346243262325597::1696578972::1696859568::1::::<><>::
-::res://Audio/::1697269633
+::res://Audio/::1697275934
+Main Menu.wav::AudioStreamWAV::2472609769522506716::1697275934::1697275942::1::::<><>::
 Taxi Theme.wav::AudioStreamWAV::534282003149242854::1697269619::1697269633::1::::<><>::
 ::res://FBX2glTF-windows-x86_64/::1696859843
 FBX2glTF-License.txt::TextFile::-1::1696859395::0::1::::<><>::
 ::res://Materials/::1696859843
 Floor_Material.tres::StandardMaterial3D::4090165980758423699::1696858884::0::1::::<><>::uid://r3pf6islxmlb
-::res://Player/::1697274508
+::res://Player/::1697275934
 Building.tscn::PackedScene::-1::1697271858::0::1::::<><>::
-Cop.tscn::PackedScene::4463221269725064564::1697274508::0::1::::<><>::uid://b18qe68kam4oj::::res://Assets/CarsAndCity/car_police.fbx
-Player.tscn::PackedScene::4096042240942873573::1697274508::0::1::::<><>::uid://bdod85trdi4dh::::res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png<>res://Scripts/Player.gd
-::res://Scenes/::1697274941
+Cop.tscn::PackedScene::4463221269725064564::1697275777::0::1::::<><>::uid://b18qe68kam4oj::::res://Assets/CarsAndCity/car_police.fbx
+cube.tscn::PackedScene::-1::1697275934::0::1::::<><>::
+Player.tscn::PackedScene::4096042240942873573::1697275934::0::1::::<><>::uid://bdod85trdi4dh::::res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png<>res://Scripts/Player.gd
+::res://Scenes/::1697275934
 Building_Test.tscn::PackedScene::-1::1697271858::0::1::::<><>::
-Game.tscn::PackedScene::6565744288245431410::1697274508::0::1::::<><>::res://Scripts/XP.gd<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowTimer.gd<>res://Scripts/ShowXP.gd<>uid://dhf5kx0yd7q8q::::res://Assets/CarsAndCity/building_A.fbx<>uid://m4606kfayci::::res://Assets/CarsAndCity/building_B.fbx<>uid://dy7vb5x1aav48::::res://Assets/CarsAndCity/building_C.fbx<>uid://bck4agq3x3fde::::res://Assets/CarsAndCity/building_D.fbx<>uid://cjitha7x3kx3i::::res://Assets/CarsAndCity/building_E.fbx<>uid://bcx0qimhd6qpj::::res://Assets/CarsAndCity/building_F.fbx<>uid://bn2mv88bsnl41::::res://Assets/CarsAndCity/building_G.fbx<>uid://24yoi3jk1qkk::::res://Assets/CarsAndCity/building_H.fbx<>uid://bvpgtjus5428r::::res://Assets/CarsAndCity/road_junction.fbx<>uid://d0tybds15otcj::::res://Assets/CarsAndCity/road_corner.fbx<>uid://cypk2apsb7ias::::res://Assets/CarsAndCity/road_corner_curved.fbx<>uid://druiq5tdj85wf::::res://Assets/CarsAndCity/road_straight.fbx<>uid://r2l4pbfr58m1::::res://Assets/CarsAndCity/road_tsplit.fbx<>uid://b54l2g56xnqyd::::res://Assets/CarsAndCity/base.fbx
-Menu.tscn::PackedScene::3225710525233883643::1697274508::0::1::::<><>::uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/PlayButton.gd
-Nick.tscn::PackedScene::2107755315940500668::1697274568::0::1::::<><>::uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd<>res://Scripts/ShowTimer.gd<>uid://hu2st151l1re::::res://Audio/Taxi Theme.wav<>uid://bck4agq3x3fde::::res://Assets/CarsAndCity/building_D.fbx<>uid://druiq5tdj85wf::::res://Assets/CarsAndCity/road_straight.fbx<>uid://bymfhnfsqidp2::::res://Player/Player.tscn
-UItest.tscn::PackedScene::2356791770329710855::1697274508::0::1::::<><>::
-::res://Scripts/::1697272616
-Building.gd::GDScript::-1::1697271858::0::1::::<>Node3D<>::
+Game.tscn::PackedScene::6565744288245431410::1697275777::0::1::::<><>::res://Scripts/XP.gd<>uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowTimer.gd<>res://Scripts/ShowXP.gd<>uid://dhf5kx0yd7q8q::::res://Assets/CarsAndCity/building_A.fbx<>uid://m4606kfayci::::res://Assets/CarsAndCity/building_B.fbx<>uid://dy7vb5x1aav48::::res://Assets/CarsAndCity/building_C.fbx<>uid://bck4agq3x3fde::::res://Assets/CarsAndCity/building_D.fbx<>uid://cjitha7x3kx3i::::res://Assets/CarsAndCity/building_E.fbx<>uid://bcx0qimhd6qpj::::res://Assets/CarsAndCity/building_F.fbx<>uid://bn2mv88bsnl41::::res://Assets/CarsAndCity/building_G.fbx<>uid://24yoi3jk1qkk::::res://Assets/CarsAndCity/building_H.fbx<>uid://bvpgtjus5428r::::res://Assets/CarsAndCity/road_junction.fbx<>uid://d0tybds15otcj::::res://Assets/CarsAndCity/road_corner.fbx<>uid://cypk2apsb7ias::::res://Assets/CarsAndCity/road_corner_curved.fbx<>uid://druiq5tdj85wf::::res://Assets/CarsAndCity/road_straight.fbx<>uid://r2l4pbfr58m1::::res://Assets/CarsAndCity/road_tsplit.fbx<>uid://b54l2g56xnqyd::::res://Assets/CarsAndCity/base.fbx
+Menu.tscn::PackedScene::3225710525233883643::1697275777::0::1::::<><>::uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/PlayButton.gd
+Nick.tscn::PackedScene::2107755315940500668::1697275777::0::1::::<><>::uid://bnnttkj6th8nt::::res://Assets/RPG_assets-main/textures/Dark/texture_08.png<>res://Scripts/ShowXP.gd<>res://Scripts/ShowTimer.gd<>res://Scenes/ShowDriverDialogue.gd<>uid://bdxx1k87deeur::::res://Assets/Driver.jpg<>uid://hu2st151l1re::::res://Audio/Taxi Theme.wav<>uid://bck4agq3x3fde::::res://Assets/CarsAndCity/building_D.fbx<>uid://druiq5tdj85wf::::res://Assets/CarsAndCity/road_straight.fbx<>uid://bymfhnfsqidp2::::res://Player/Player.tscn
+ShowDriverDialogue.gd::GDScript::-1::1697275773::0::1::::<>Panel<>::
+UItest.tscn::PackedScene::2356791770329710855::1697275777::0::1::::<><>::
+::res://Scripts/::1697275934
+Building.gd::GDScript::-1::1697275934::0::1::::<>Node3D<>::
 PlayButton.gd::GDScript::-1::1697266194::0::1::::<>Button<>::
 Player.gd::GDScript::-1::1697271896::0::1::::<>RigidBody3D<>::
 ShowTimer.gd::GDScript::-1::1697267376::0::1::::<>Label<>::
