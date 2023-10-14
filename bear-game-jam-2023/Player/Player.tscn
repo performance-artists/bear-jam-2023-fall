@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://gudaru4h2toy"]
+[gd_scene load_steps=19 format=3 uid="uid://bymfhnfsqidp2"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
@@ -175,6 +175,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v75id")
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jt648"]
+emission_shape = 1
+emission_sphere_radius = 0.3
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0.3, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3yxv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vft4"]
+material = SubResource("StandardMaterial3D_w3yxv")
+size = Vector3(0.1, 0.1, 0.1)
+
 [node name="Car" type="RigidBody3D"]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
@@ -216,6 +229,16 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, -0.00176001, 0.00256164, 0.000112574)
 mesh = SubResource("ArrayMesh_k4a15")
 skeleton = NodePath("")
+
+[node name="Particle" type="GPUParticles3D" parent="CarMesh/RootNode/car_taxi"]
+transform = Transform3D(0.01, 0, -7.94093e-23, 0, 0.01, 0, 0, 0, 0.01, 6.00422e-05, 0.00283516, 9.21111e-05)
+emitting = false
+amount = 100
+lifetime = 2.0
+fixed_fps = 60
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_jt648")
+draw_pass_1 = SubResource("BoxMesh_5vft4")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 

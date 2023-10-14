@@ -7,11 +7,6 @@ res://Player/Cop.tscn
 res://Scripts/Player.gd
 res://Scripts/PlayButton.gd
 res://Scripts/ShowTimer.gd
-res://Scenes/Building_Test.tscn
-res://Scenes/Nick.tscn
-res://Scripts/Building.gd
-res://Player/Building.tscn
-res://Player/cube.tscn
-res://Player/Cop.tscn
-res://Scenes/Nick.tscn
-res://Player/Player.tscn
+res://Scripts/Timer.gd
+res://Scenes/UItest.tscn
+res://Scenes/ShowDriverDialogue.gd
