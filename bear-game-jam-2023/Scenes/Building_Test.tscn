@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwli0j5bc7e0o"]
+[gd_scene load_steps=4 format=3 uid="uid://c0fhxmudprawx"]
 
-[ext_resource type="PackedScene" uid="uid://ddwrrjqs71be7" path="res://Player/Building.tscn" id="1_lat1c"]
+[ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="1_lat1c"]
 
 [sub_resource type="Environment" id="Environment_uclqk"]
 

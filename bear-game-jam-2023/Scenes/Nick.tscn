@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=19 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="5_8b3ow"]
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="7_heb2f"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="7_mm8x8"]
+[ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="10_7pi84"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="15_abbnw"]
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 
@@ -707,3 +708,27 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -8, 0,
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_heb2f")
 autoplay = true
+
+[node name="Building" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, 14.8946)
+
+[node name="Building2" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, 11.9688)
+
+[node name="Building3" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, 8.88818)
+
+[node name="Building4" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, 5.12919)
+
+[node name="Building5" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, 0.785769)
+
+[node name="Building6" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, -3.48741)
+
+[node name="Building7" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, -10.5908)
+
+[node name="Building8" parent="." instance=ExtResource("10_7pi84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18915, 0.000500679, -10.5908)

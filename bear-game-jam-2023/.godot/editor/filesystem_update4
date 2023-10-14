@@ -10,3 +10,5 @@ res://Scripts/ShowTimer.gd
 res://Scripts/Timer.gd
 res://Scenes/UItest.tscn
 res://Scenes/ShowDriverDialogue.gd
+res://Scenes/Building_Test.tscn
+res://Player/Building.tscn
