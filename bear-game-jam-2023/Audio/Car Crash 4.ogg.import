@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqlngji0d8alq"
+path="res://.godot/imported/Car Crash 4.ogg-5cf3646e94afa0f597bb94d848f0d50e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Car Crash 4.ogg"
+dest_files=["res://.godot/imported/Car Crash 4.ogg-5cf3646e94afa0f597bb94d848f0d50e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
