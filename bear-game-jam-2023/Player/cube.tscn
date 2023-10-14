@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqj15rsptumqx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ya5n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uchye"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_e57em"]
+
+[node name="cube" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("BoxShape3D_6ya5n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_uchye")
+mesh = SubResource("BoxMesh_e57em")
