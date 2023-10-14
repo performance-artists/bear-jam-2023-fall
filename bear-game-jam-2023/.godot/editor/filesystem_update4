@@ -15,3 +15,5 @@ res://Scenes/Building_Test.tscn
 res://Player/Building.tscn
 res://Player/cube.tscn
 res://Scripts/ShowPassengerDialogue.gd
+res://Scripts/Lose.gd
+res://ToMenu.gd
