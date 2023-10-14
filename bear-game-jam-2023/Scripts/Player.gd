@@ -21,6 +21,7 @@ func _physics_process(delta):
 	if IS_PICKINGUP:
 		PICKUP_DELAY += delta
 	if PICKUP_DELAY >= 1.25:
+		PICKUP_DELAY = 0
 		IS_PICKINGUP = false
 	
 	# Add the gravity.

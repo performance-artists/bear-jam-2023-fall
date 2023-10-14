@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cei886k7qnxin"
+path.s3tc="res://.godot/imported/bench-114d61df1c0f7242fe51e8f5ca8b34f9_citybits_texture.png-2d87ac3dbc8ccc1f4cda7c2ab927b5f5.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://Assets/CarsAndCity/bench-114d61df1c0f7242fe51e8f5ca8b34f9_citybits_texture.png"
+dest_files=["res://.godot/imported/bench-114d61df1c0f7242fe51e8f5ca8b34f9_citybits_texture.png-2d87ac3dbc8ccc1f4cda7c2ab927b5f5.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

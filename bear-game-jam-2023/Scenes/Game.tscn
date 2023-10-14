@@ -1,16 +1,23 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=24 format=3 uid="uid://c0sq34vnj0wvy"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
 [ext_resource type="PackedScene" uid="uid://gudaru4h2toy" path="res://Player/Player.tscn" id="2_343l5"]
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="4_w71t3"]
-[ext_resource type="PackedScene" uid="uid://dsrxhgv6xqrtv" path="res://Assets/Farm2/FBX/BigBarn.fbx" id="5_op4hk"]
-[ext_resource type="PackedScene" uid="uid://cr674avuwxxsa" path="res://Assets/Farm2/FBX/OpenBarn.fbx" id="6_66c7k"]
-[ext_resource type="PackedScene" uid="uid://bsfspyvj60o52" path="res://Assets/Farm2/FBX/TowerWindmill.fbx" id="7_w4t51"]
-[ext_resource type="PackedScene" uid="uid://b0cwmlt5tjr17" path="res://Assets/Farm2/FBX/Windmill.fbx" id="8_jrp1k"]
-[ext_resource type="PackedScene" uid="uid://4ws8k1dv4vgm" path="res://Assets/Farm2/FBX/Silo.fbx" id="9_fishj"]
-[ext_resource type="PackedScene" uid="uid://cvulrclxr2aqn" path="res://Assets/Farm2/FBX/ChickenCoop.fbx" id="10_o38xk"]
-[ext_resource type="PackedScene" uid="uid://bdg1txn7jrdl5" path="res://Assets/Farm2/FBX/Well.fbx" id="11_astsc"]
+[ext_resource type="PackedScene" uid="uid://dhf5kx0yd7q8q" path="res://Assets/CarsAndCity/building_A.fbx" id="5_esr3f"]
+[ext_resource type="PackedScene" uid="uid://m4606kfayci" path="res://Assets/CarsAndCity/building_B.fbx" id="6_lekq5"]
+[ext_resource type="PackedScene" uid="uid://dy7vb5x1aav48" path="res://Assets/CarsAndCity/building_C.fbx" id="7_cx57q"]
+[ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="8_3wou0"]
+[ext_resource type="PackedScene" uid="uid://cjitha7x3kx3i" path="res://Assets/CarsAndCity/building_E.fbx" id="9_m2em0"]
+[ext_resource type="PackedScene" uid="uid://bcx0qimhd6qpj" path="res://Assets/CarsAndCity/building_F.fbx" id="10_8w4rc"]
+[ext_resource type="PackedScene" uid="uid://bn2mv88bsnl41" path="res://Assets/CarsAndCity/building_G.fbx" id="11_2wm76"]
+[ext_resource type="PackedScene" uid="uid://24yoi3jk1qkk" path="res://Assets/CarsAndCity/building_H.fbx" id="12_3crtg"]
+[ext_resource type="PackedScene" uid="uid://bvpgtjus5428r" path="res://Assets/CarsAndCity/road_junction.fbx" id="13_wdu86"]
+[ext_resource type="PackedScene" uid="uid://d0tybds15otcj" path="res://Assets/CarsAndCity/road_corner.fbx" id="14_cwexx"]
+[ext_resource type="PackedScene" uid="uid://cypk2apsb7ias" path="res://Assets/CarsAndCity/road_corner_curved.fbx" id="15_537qs"]
+[ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="16_wpnrn"]
+[ext_resource type="PackedScene" uid="uid://r2l4pbfr58m1" path="res://Assets/CarsAndCity/road_tsplit.fbx" id="17_bbnfp"]
+[ext_resource type="PackedScene" uid="uid://b54l2g56xnqyd" path="res://Assets/CarsAndCity/base.fbx" id="18_7ej74"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndtst"]
 albedo_texture = ExtResource("2_nyp06")
@@ -33,12 +40,12 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufxtg"]
 
-[sub_resource type="Sky" id="Sky_2y5xi"]
+[sub_resource type="Sky" id="Sky_j6rru"]
 
 [sub_resource type="Environment" id="Environment_q8sut"]
 background_mode = 1
 background_color = Color(0.431373, 0.72549, 1, 1)
-sky = SubResource("Sky_2y5xi")
+sky = SubResource("Sky_j6rru")
 ambient_light_color = Color(0.398272, 0.802632, 1, 1)
 
 [node name="World" type="Node3D"]
@@ -69,8 +76,9 @@ script = ExtResource("4_w71t3")
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000302315, 0.0373955, -0.01507)
-light_energy = 0.39
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9997, 9.0374, -3.01507)
+light_color = Color(0.380392, 0.380392, 0.380392, 1)
+light_energy = 0.1
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
 
@@ -78,24 +86,46 @@ light_angular_distance = 90.0
 environment = SubResource("Environment_q8sut")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_343l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 3)
 
-[node name="BigBarn" parent="." instance=ExtResource("5_op4hk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
+[node name="building_A" parent="." instance=ExtResource("5_esr3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
-[node name="OpenBarn" parent="." instance=ExtResource("6_66c7k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -13)
+[node name="building_B" parent="." instance=ExtResource("6_lekq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
 
-[node name="TowerWindmill" parent="." instance=ExtResource("7_w4t51")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -6)
+[node name="building_C" parent="." instance=ExtResource("7_cx57q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
 
-[node name="Windmill" parent="." instance=ExtResource("8_jrp1k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -3)
+[node name="building_D" parent="." instance=ExtResource("8_3wou0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
 
-[node name="Silo" parent="." instance=ExtResource("9_fishj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+[node name="building_E" parent="." instance=ExtResource("9_m2em0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
 
-[node name="ChickenCoop" parent="." instance=ExtResource("10_o38xk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+[node name="building_F" parent="." instance=ExtResource("10_8w4rc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1)
 
-[node name="Well" parent="." instance=ExtResource("11_astsc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+[node name="building_G" parent="." instance=ExtResource("11_2wm76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -1)
+
+[node name="building_H" parent="." instance=ExtResource("12_3crtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -1)
+
+[node name="road_junction" parent="." instance=ExtResource("13_wdu86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="road_corner" parent="." instance=ExtResource("14_cwexx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="road_corner_curved" parent="." instance=ExtResource("15_537qs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+
+[node name="road_straight" parent="." instance=ExtResource("16_wpnrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="road_tsplit" parent="." instance=ExtResource("17_bbnfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+
+[node name="base" parent="." instance=ExtResource("18_7ej74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)

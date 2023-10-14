@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl7s8md6as5j8"]
+
+[ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_5u3g5"]
+[ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="3_dfrb1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxth4"]
+albedo_texture = ExtResource("1_5u3g5")
+
+[sub_resource type="Sky" id="Sky_2y5xi"]
+
+[sub_resource type="Environment" id="Environment_6e46s"]
+background_mode = 1
+background_color = Color(0.431373, 0.72549, 1, 1)
+sky = SubResource("Sky_2y5xi")
+ambient_light_color = Color(0.398272, 0.802632, 1, 1)
+
+[sub_resource type="FontFile" id="FontFile_061dy"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_af7pf"]
+
+[sub_resource type="FontFile" id="FontFile_3yfhb"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+
+[node name="Menu" type="Node3D"]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Map"]
+material_override = SubResource("StandardMaterial3D_lxth4")
+use_collision = true
+size = Vector3(100, 0.001, 100)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000302315, 0.0373955, -0.01507)
+light_energy = 0.39
+light_volumetric_fog_energy = 16.0
+light_angular_distance = 90.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_6e46s")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -5.58132e-08, 1.97068e-07, 5.58132e-08, 1, 1.0999e-14, -1.97068e-07, 7.00126e-22, 1, 0, 1.42052, 3)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+offset_left = 867.0
+offset_top = 81.0
+offset_right = 1133.0
+offset_bottom = 231.0
+theme_override_fonts/font = SubResource("FontFile_061dy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_af7pf")
+text = "TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="UI"]
+offset_left = 876.0
+offset_top = 416.0
+offset_right = 1105.0
+offset_bottom = 558.0
+theme_override_fonts/font = SubResource("FontFile_3yfhb")
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+script = ExtResource("3_dfrb1")
+
+[connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]

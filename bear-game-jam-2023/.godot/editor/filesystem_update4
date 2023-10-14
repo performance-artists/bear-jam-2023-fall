@@ -1,3 +1,4 @@
+res://Scenes/Menu.tscn
 res://Scenes/Game.tscn
 res://Player/Player.tscn
-res://Scripts/Player.gd
+res://Player/Cop.tscn
