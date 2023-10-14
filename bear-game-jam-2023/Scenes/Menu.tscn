@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bl7s8md6as5j8"]
+[gd_scene load_steps=9 format=3 uid="uid://bl7s8md6as5j8"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_5u3g5"]
 [ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="3_dfrb1"]
-[ext_resource type="AudioStream" uid="uid://bbh0r0a8kxrmi" path="res://Audio/Main Menu.wav" id="3_wmuu4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxth4"]
 albedo_texture = ExtResource("1_5u3g5")
@@ -117,9 +116,5 @@ theme_override_fonts/font = SubResource("FontFile_3yfhb")
 theme_override_font_sizes/font_size = 100
 text = "PLAY"
 script = ExtResource("3_dfrb1")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_wmuu4")
-autoplay = true
 
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
