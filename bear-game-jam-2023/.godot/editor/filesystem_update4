@@ -1,10 +1,6 @@
-res://Scenes/Nick.tscn
-res://Player/Player.tscn
-res://Player/Player.gd
 res://Scenes/Menu.tscn
+res://Scripts/Player.gd
 res://Scenes/Game.tscn
 res://Player/Cop.tscn
-res://Scripts/Player.gd
-res://Scripts/PlayButton.gd
-res://Scripts/ShowTimer.gd
-res://Scripts/Timer.gd
+res://Scenes/Nick.tscn
+res://Player/Player.tscn
