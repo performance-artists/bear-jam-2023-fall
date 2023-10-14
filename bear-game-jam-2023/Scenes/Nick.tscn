@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=13 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
 [ext_resource type="Script" path="res://Scripts/ShowTimer.gd" id="3_fe0pv"]
+[ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="7_heb2f"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="7_mm8x8"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="15_abbnw"]
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
@@ -132,3 +133,7 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -8, 0,
 
 [node name="building_D9" parent="." instance=ExtResource("7_mm8x8")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -8, 0, 16)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_heb2f")
+autoplay = true
