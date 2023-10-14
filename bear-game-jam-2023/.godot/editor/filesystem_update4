@@ -2,9 +2,6 @@ res://Scenes/Nick.tscn
 res://Scripts/Player.gd
 res://Player/cube.tscn
 res://Player/Building.tscn
-<<<<<<< HEAD
 res://Player/Player.tscn
 res://Scripts/cube.gd
-=======
-res://Player/cube.tscn
->>>>>>> 4ece19c8d236229f2b92d63e7cce85bad4fd1068
+res://Scripts/Building.gd

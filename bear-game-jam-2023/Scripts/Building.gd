@@ -38,7 +38,7 @@ func spawn_cube(dimension, obj_position):
 				# cube_instance.transform = Transform3D(Basis(), )
 				add_child(cube_instance)
 func _on_area_3d_body_entered(body):
-	if body.name == "Car" and not destroyed:
+	if body.name == "Car" and not destroyed and body.get_skill_status():
 		destroyed = true
 		$CollisionShape3D.queue_free()
 		collapse()
