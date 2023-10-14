@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddu8ct6d0f12"
+path="res://.godot/imported/Car Running.ogg-ff0e00494b9b5394986e51a0d35add2c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Car Running.ogg"
+dest_files=["res://.godot/imported/Car Running.ogg-ff0e00494b9b5394986e51a0d35add2c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

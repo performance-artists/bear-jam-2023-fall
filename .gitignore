@@ -1,5 +1,6 @@
 godot-cpp
 .godot
+.godot/editor
 .vscode
 .idea
 .DS_Store
