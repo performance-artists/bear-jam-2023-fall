@@ -1,7 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://bymfhnfsqidp2"]
+[gd_scene load_steps=30 format=3 uid="uid://bymfhnfsqidp2"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
+[ext_resource type="Script" path="res://Player/vfx_camera.gd" id="3_dd1j0"]
+[ext_resource type="Shader" path="res://Player/vfx_SpeedLine.gdshader" id="4_6qy3y"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y3htr"]
 bounce = 0.1
@@ -193,6 +195,149 @@ gravity = Vector3(0, 0.3, 0)
 material = SubResource("StandardMaterial3D_w3yxv")
 size = Vector3(0.1, 0.1, 0.1)
 
+[sub_resource type="Animation" id="Animation_7qhhk"]
+resource_name = "SpeedLine"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect/ColorRect:material:shader_parameter/line_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(4.14106, 4.75683),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.33, 0.15]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_edge")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.786, 0.688]
+}
+
+[sub_resource type="Animation" id="Animation_3g3w3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect/ColorRect:material:shader_parameter/line_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.15]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_edge")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.688]
+}
+
+[sub_resource type="Animation" id="Animation_if3nc"]
+resource_name = "Decay_SpeedLine"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect/ColorRect:material:shader_parameter/line_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.15, 0.33]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_edge")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.688, 0.786]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nxcrj"]
+_data = {
+"Decay_SpeedLine": SubResource("Animation_if3nc"),
+"RESET": SubResource("Animation_3g3w3"),
+"SpeedLine": SubResource("Animation_7qhhk")
+}
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sjcul"]
+noise_type = 0
+frequency = 0.0396
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rlul"]
+noise = SubResource("FastNoiseLite_sjcul")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uljel"]
+shader = ExtResource("4_6qy3y")
+shader_parameter/line_color = Color(1, 1, 1, 0)
+shader_parameter/line_count = 1.8
+shader_parameter/line_density = 0.591
+shader_parameter/line_faloff = 0.724
+shader_parameter/mask_size = 0.15
+shader_parameter/mask_edge = 0.688
+shader_parameter/animation_speed = 20.0
+shader_parameter/noise = SubResource("NoiseTexture2D_8rlul")
+
 [node name="Car" type="RigidBody3D"]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
@@ -263,3 +408,25 @@ draw_pass_1 = SubResource("BoxMesh_5vft4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, -0.612372, 0.353553, 0, 0.5, 0.866025, -0.707107, -0.612372, 0.353553, 2, 4, 2)
+script = ExtResource("3_dd1j0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
+libraries = {
+"": SubResource("AnimationLibrary_nxcrj")
+}
+
+[node name="TextureRect" type="TextureRect" parent="Camera3D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Camera3D/TextureRect"]
+material = SubResource("ShaderMaterial_uljel")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
