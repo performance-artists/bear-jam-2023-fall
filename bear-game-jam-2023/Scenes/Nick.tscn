@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="5_8b3ow"]
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="7_heb2f"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="7_mm8x8"]
-[ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="10_7pi84"]
+[ext_resource type="PackedScene" path="res://Player/Building.tscn" id="10_7pi84"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="15_abbnw"]
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 
@@ -613,7 +613,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_fe0pv")
 
-[node name="Driver" type="Panel" parent="UI"]
+[node name="DriverDialogue" type="Panel" parent="UI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -627,7 +627,7 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_eh0yg")
 
-[node name="Panel" type="Panel" parent="UI/Driver"]
+[node name="Avatar" type="Panel" parent="UI/DriverDialogue"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 4
@@ -640,7 +640,7 @@ offset_bottom = 62.5
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_v2p1t")
 
-[node name="Label" type="Label" parent="UI/Driver"]
+[node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
