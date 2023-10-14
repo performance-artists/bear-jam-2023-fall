@@ -1,13 +1,6 @@
 res://Scripts/Building.gd
 res://Scripts/PlayButton.gd
 res://Scripts/Player.gd
-<<<<<<< HEAD
-res://Player/cube.tscn
-res://Player/Building.tscn
-res://Player/Player.tscn
-res://Scripts/cube.gd
-res://Scripts/Building.gd
-=======
 res://Scenes/ShowDriverDialogue.gd
 res://Scripts/ShowTimer.gd
 res://Scripts/ShowXP.gd
@@ -21,4 +14,4 @@ res://Player/Player.tscn
 res://Scenes/Building_Test.tscn
 res://Player/Building.tscn
 res://Player/cube.tscn
->>>>>>> e30e23bc2420dd868f344a794616674d5bb96ee3
+res://Scripts/ShowPassengerDialogue.gd
