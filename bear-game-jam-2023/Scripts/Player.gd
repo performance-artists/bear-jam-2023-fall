@@ -25,43 +25,12 @@ func _physics_process(delta):
 	car_mesh.position = sphere_offset
 	#if ground_ray.is_colliding():
 	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
-
-<<<<<<< HEAD
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not IS_PICKINGUP:d
-		animation_player.play("PickUp")
-		#velocity.y = JUMP_VELOCITY
-		IS_PICKINGUP = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction and not IS_PICKINGUP:
-		look_direction = look_direction.lerp(direction, delta * ROTATE_SPEED).normalized()
-		
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-		
-		visual.look_at(look_direction + position)
-		
-		walking = true
-		
-		if Input.is_key_pressed(KEY_SHIFT):
-			SPEED = 10.0
-			animation_player.play("Run")
-		else:
-			SPEED = 5.0
-			animation_player.play("Walk")
-			
-	elif not IS_PICKINGUP:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-		
-		if walking:
-			walking = false
-			animation_player.play("Idle")
-=======
 func _process(delta):
 	#if not ground_ray.is_colliding():
 	#	return
@@ -69,7 +38,6 @@ func _process(delta):
 	turn_input = Input.get_axis("ui_right", "ui_left") * deg_to_rad(steering)
 	right_wheel.rotation.y = turn_input
 	left_wheel.rotation.y = turn_input
->>>>>>> 53b4ff02ed81e8b087192a6b744e71239be3e043
 	
 	# rotate car mesh
 	if linear_velocity.length() > turn_stop_limit:
