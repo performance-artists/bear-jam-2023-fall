@@ -612,7 +612,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_fe0pv")
 
-[node name="Driver" type="Panel" parent="UI"]
+[node name="DriverDialogue" type="Panel" parent="UI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -626,7 +626,7 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_eh0yg")
 
-[node name="Panel" type="Panel" parent="UI/Driver"]
+[node name="Avatar" type="Panel" parent="UI/DriverDialogue"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 4
@@ -639,7 +639,7 @@ offset_bottom = 62.5
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_v2p1t")
 
-[node name="Label" type="Label" parent="UI/Driver"]
+[node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

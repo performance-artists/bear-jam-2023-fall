@@ -12,3 +12,4 @@ res://Scenes/UItest.tscn
 res://Scenes/ShowDriverDialogue.gd
 res://Scenes/Building_Test.tscn
 res://Player/Building.tscn
+res://Player/cube.tscn
