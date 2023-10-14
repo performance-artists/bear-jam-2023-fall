@@ -8,3 +8,5 @@ res://Scripts/Player.gd
 res://Scripts/PlayButton.gd
 res://Scripts/ShowTimer.gd
 res://Scripts/Timer.gd
+res://Scenes/UItest.tscn
+res://Scenes/ShowDriverDialogue.gd
