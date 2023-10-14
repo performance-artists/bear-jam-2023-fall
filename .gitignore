@@ -1,1 +1,8 @@
-godot-cpp/bin/
+godot-cpp
+.godot
+.vscode
+.idea
+.DS_Store
+.sconsign.dblite
+SConstruct
+FBX2gITF-windows-x86_64
