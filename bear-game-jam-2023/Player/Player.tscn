@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bymfhnfsqidp2"]
+[gd_scene load_steps=21 format=3 uid="uid://bymfhnfsqidp2"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
@@ -7,7 +7,7 @@
 bounce = 0.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_r0821"]
-radius = 1.0
+radius = 0.55
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbdl1"]
 resource_name = "citybits_texture"
@@ -174,6 +174,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v75id")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo6xu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_035pe"]
+material = SubResource("StandardMaterial3D_wo6xu")
+size = Vector3(0.1, 0.1, 0.1)
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jt648"]
 emission_shape = 1
 emission_sphere_radius = 0.3
@@ -202,10 +208,10 @@ shape = SubResource("SphereShape3D_r0821")
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 
 [node name="RootNode" type="Node3D" parent="CarMesh"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.380638, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.583912, 0)
 
 [node name="car_taxi" type="MeshInstance3D" parent="CarMesh/RootNode"]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0.187331, 0)
 mesh = SubResource("ArrayMesh_hft3f")
 skeleton = NodePath("")
 
@@ -229,7 +235,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 2.64698e-23, 0, -2.64698e-23, 1, -0.00176
 mesh = SubResource("ArrayMesh_k4a15")
 skeleton = NodePath("")
 
-[node name="Particle" type="GPUParticles3D" parent="CarMesh/RootNode/car_taxi"]
+[node name="Particle" type="CPUParticles3D" parent="CarMesh/RootNode/car_taxi"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 6.00422e-05, 0.00283516, 9.21111e-05)
+emitting = false
+amount = 100
+lifetime = 2.0
+fixed_fps = 60
+fract_delta = false
+mesh = SubResource("BoxMesh_035pe")
+emission_shape = 1
+emission_sphere_radius = 0.3
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0.3, 0)
+
+[node name="Particle" type="GPUParticles3D" parent="CarMesh/RootNode/car_taxi/Particle"]
 transform = Transform3D(0.01, 0, -7.94093e-23, 0, 0.01, 0, 0, 0, 0.01, 6.00422e-05, 0.00283516, 9.21111e-05)
 emitting = false
 amount = 100

@@ -79,6 +79,7 @@ script = ExtResource("3_dfrb1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wmuu4")
+volume_db = 5.0
 autoplay = true
 
 [node name="Lighting" type="Node3D" parent="."]
