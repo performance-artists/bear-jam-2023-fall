@@ -1,9 +1,8 @@
-res://Scenes/Game.tscn
+res://Scenes/Nick.tscn
 res://Player/Player.tscn
-res://Scripts/Timer.gd
-res://Scripts/XP.gd
-res://Scripts/ShowTimer.gd
-res://Scripts/ShowXP.gd
-res://Scripts/Player.gd
+res://Player/Player.gd
 res://Scenes/Menu.tscn
+res://Scenes/Game.tscn
 res://Player/Cop.tscn
+res://Scripts/Player.gd
+res://Scripts/PlayButton.gd

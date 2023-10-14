@@ -40,12 +40,12 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufxtg"]
 
-[sub_resource type="Sky" id="Sky_j6rru"]
+[sub_resource type="Sky" id="Sky_8q0dm"]
 
 [sub_resource type="Environment" id="Environment_q8sut"]
 background_mode = 1
 background_color = Color(0.431373, 0.72549, 1, 1)
-sky = SubResource("Sky_j6rru")
+sky = SubResource("Sky_8q0dm")
 ambient_light_color = Color(0.398272, 0.802632, 1, 1)
 
 [node name="World" type="Node3D"]
