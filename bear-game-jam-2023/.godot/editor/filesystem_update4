@@ -1,10 +1,16 @@
-res://Scenes/Nick.tscn
+res://Scripts/Building.gd
+res://Scripts/PlayButton.gd
 res://Scripts/Player.gd
-res://Player/cube.tscn
-res://Player/Building.tscn
-<<<<<<< HEAD
+res://Scenes/ShowDriverDialogue.gd
+res://Scripts/ShowTimer.gd
+res://Scripts/ShowXP.gd
+res://Scripts/Timer.gd
+res://Scripts/XP.gd
+res://Scenes/Menu.tscn
+res://Scenes/Game.tscn
+res://Player/Cop.tscn
+res://Scenes/Nick.tscn
 res://Player/Player.tscn
-res://Scripts/cube.gd
-=======
+res://Scenes/Building_Test.tscn
+res://Player/Building.tscn
 res://Player/cube.tscn
->>>>>>> 4ece19c8d236229f2b92d63e7cce85bad4fd1068
