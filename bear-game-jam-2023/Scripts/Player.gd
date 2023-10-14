@@ -21,6 +21,7 @@ var turn_stop_limit = 0.75
 # Variables for input values
 var speed_input = 0
 var turn_input = 0
+var using_skill = false
 
 func _physics_process(delta):
 	car_mesh.position = sphere_offset
@@ -28,6 +29,10 @@ func _physics_process(delta):
 	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 
 func _process(delta):
+	acceleration -= 1
+	if acceleration < 15:
+		acceleration = 15
+		using_skill = false
 	#if not ground_ray.is_colliding():
 	#	return
 	speed_input = Input.get_axis("ui_down", "ui_up") * acceleration
@@ -50,6 +55,12 @@ func _process(delta):
 		var n = ground_ray.get_collision_normal()
 		var xform = align_with_y(car_mesh.global_transform, n)
 		car_mesh.global_transform = car_mesh.global_transform.interpolate_with(xform, 10.0 * delta)
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		acceleration = 40
+		using_skill = true
+func get_skill_status():
+	return using_skill
 
 func align_with_y(xform, new_y):
 	xform.basis.y = new_y

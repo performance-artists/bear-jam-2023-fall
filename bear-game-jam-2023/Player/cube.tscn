@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+[gd_scene load_steps=5 format=3 uid="uid://cqj15rsptumqx"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_twiyf"]
+=======
 [gd_scene load_steps=4 format=3 uid="uid://dqc2ok1xouc3n"]
+>>>>>>> e30e23bc2420dd868f344a794616674d5bb96ee3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ya5n"]
 
@@ -8,6 +14,10 @@
 
 [node name="cube" type="RigidBody3D"]
 collision_layer = 0
+<<<<<<< HEAD
+script = ExtResource("1_twiyf")
+=======
+>>>>>>> e30e23bc2420dd868f344a794616674d5bb96ee3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
