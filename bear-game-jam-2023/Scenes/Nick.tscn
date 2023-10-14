@@ -18,9 +18,10 @@ albedo_texture = ExtResource("1_r5w6a")
 
 [sub_resource type="Environment" id="Environment_582hk"]
 background_mode = 1
-background_color = Color(0.431373, 0.72549, 1, 1)
+background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_j6rru")
-ambient_light_color = Color(0.398272, 0.802632, 1, 1)
+ambient_light_color = Color(0.4, 0.803922, 1, 1)
+sdfgi_enabled = true
 
 [sub_resource type="FontFile" id="FontFile_kh88i"]
 cache/0/16/0/ascent = 0.0
@@ -562,7 +563,7 @@ size = Vector3(100, 0.001, 100)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9997, 9.0374, -3.01507)
-light_color = Color(0.380392, 0.380392, 0.380392, 1)
+light_color = Color(0.392157, 0.2, 0.00784314, 1)
 light_energy = 0.1
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0

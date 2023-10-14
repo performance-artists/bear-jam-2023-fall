@@ -36,7 +36,6 @@ func spawn_cube(dimension, obj_position):
 				cube_instance.position = Vector3(x, y, z) * CUBE_SIZE
 				cube_instance.position.z -= 1
 				# cube_instance.transform = Transform3D(Basis(), )
-				
 				add_child(cube_instance)
 func _on_area_3d_body_entered(body):
 	if body.name == "Car" and not destroyed:
