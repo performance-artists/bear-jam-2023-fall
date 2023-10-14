@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-XP="*res://Scripts/XP.gd"
+GlobalXP="*res://Scripts/XP.gd"
+GlobalTimer="*res://Scripts/Timer.gd"
 
 [input]
 

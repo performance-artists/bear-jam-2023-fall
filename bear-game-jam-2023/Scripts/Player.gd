@@ -30,7 +30,7 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not IS_PICKINGUP:
-		XP.value += 1 # debugging test XP
+		.value += 1 # debugging test XP
 		animation_player.play("PickUp")
 		#velocity.y = JUMP_VELOCITY
 		IS_PICKINGUP = true

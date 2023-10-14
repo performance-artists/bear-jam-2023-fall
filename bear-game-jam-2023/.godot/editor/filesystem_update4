@@ -1,4 +1,9 @@
-res://Scenes/Menu.tscn
 res://Scenes/Game.tscn
 res://Player/Player.tscn
+res://Scripts/Timer.gd
+res://Scripts/XP.gd
+res://Scripts/ShowTimer.gd
+res://Scripts/ShowXP.gd
+res://Scripts/Player.gd
+res://Scenes/Menu.tscn
 res://Player/Cop.tscn
