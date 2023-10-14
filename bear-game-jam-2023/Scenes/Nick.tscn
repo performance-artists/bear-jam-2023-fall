@@ -18,20 +18,20 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
 
-[sub_resource type="Sky" id="Sky_j6rru"]
+[sub_resource type="Sky" id="Sky_rk51t"]
 
 [sub_resource type="Environment" id="Environment_582hk"]
 background_mode = 1
-background_color = Color(0.431373, 0.72549, 1, 1)
-sky = SubResource("Sky_j6rru")
-ambient_light_color = Color(0.398272, 0.802632, 1, 1)
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_rk51t")
+ambient_light_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qeke"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2p1t"]
 texture = ExtResource("5_8b3ow")
 
-[sub_resource type="FontFile" id="FontFile_8m7jy"]
+[sub_resource type="FontFile" id="FontFile_2ahif"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -537,7 +537,7 @@ cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_dxdnf"]
-default_font = SubResource("FontFile_8m7jy")
+default_font = SubResource("FontFile_2ahif")
 default_font_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgwco"]
@@ -566,6 +566,7 @@ light_color = Color(0.380392, 0.380392, 0.380392, 1)
 light_energy = 0.1
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
+sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = SubResource("Environment_582hk")

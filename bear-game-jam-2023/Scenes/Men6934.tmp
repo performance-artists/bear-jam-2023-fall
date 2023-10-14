@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://bl7s8md6as5j8"]
+[gd_scene load_steps=28 format=3 uid="uid://bl7s8md6as5j8"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_5u3g5"]
+[ext_resource type="Script" path="res://Scenes/MenuCamera.gd" id="1_d1ipd"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="1_g63ei"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="3_484hb"]
 [ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="3_dfrb1"]
@@ -196,6 +197,7 @@ ambient_light_color = Color(0.398272, 0.802632, 1, 1)
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -5.58132e-08, 1.97068e-07, 5.58132e-08, 1, 1.0999e-14, -1.97068e-07, 7.00126e-22, 1, 0, 0.582113, 3)
 current = true
+script = ExtResource("1_d1ipd")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
