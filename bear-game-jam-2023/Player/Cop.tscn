@@ -214,7 +214,7 @@ albedo_color = Color(0.988235, 0.368627, 0.0784314, 1)
 material = SubResource("StandardMaterial3D_w3yxv")
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Cop" type="CharacterBody3D"]
 script = ExtResource("1_18ng4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
