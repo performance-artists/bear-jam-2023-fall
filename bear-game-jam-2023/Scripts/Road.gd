@@ -20,7 +20,7 @@ func bfs(width: int, height: int, r):
 		q.pop_front()
 		var x = top.x
 		var y = top.y
-		if road_counter > 800:
+		if road_counter > 400:
 			q.clear()
 			return
 		if x < 0 or x >= width or y < 0 or y >= height:
@@ -28,7 +28,7 @@ func bfs(width: int, height: int, r):
 		var dir = randi() % 4 + 1
 		for i in range(dir):
 			var move_dir = randi() % 4
-			var len = 20 + randi() % 60
+			var len = 20 + randi() % 80
 			road_counter += 1
 			if move_dir == 0:
 				for j in range(len):
@@ -101,8 +101,3 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
-				var chance = randi_range(0,6)
-				if chance == 0:
-					var npc_temp = npc_node.instantiate()
-					npc_temp.position = Vector3(i * size, 0, j * size) - offset
-					add_child(npc_temp)

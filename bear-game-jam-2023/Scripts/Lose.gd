@@ -4,6 +4,7 @@ extends Panel
 @onready var xp = $"../XP"
 @onready var timer = $"../Timer"
 @onready var health = $"../Health"
+@onready var nitro = $"../Nitro"
 
 @export var taxi_theme_player: AudioStreamPlayer
 @export var game_over_player: AudioStreamPlayer
@@ -20,6 +21,7 @@ func _process(delta):
 		xp.hide()
 		timer.hide()
 		health.hide()
+		nitro.hide()
 		self.show()
 		GlobalHealth.value = 0
 		GlobalXP.value = 0
@@ -33,3 +35,4 @@ func _process(delta):
 		xp.show()
 		timer.show()
 		health.show()
+		nitro.show()
