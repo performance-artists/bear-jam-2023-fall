@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var map_width = 150
-@export var map_height = 150
+@export var map_width = 100
+@export var map_height = 100
 var road_counter = 0
 
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
@@ -20,7 +20,7 @@ func bfs(width: int, height: int, r):
 		q.pop_front()
 		var x = top.x
 		var y = top.y
-		if road_counter > 400:
+		if road_counter > 300:
 			q.clear()
 			return
 		if x < 0 or x >= width or y < 0 or y >= height:
@@ -28,7 +28,7 @@ func bfs(width: int, height: int, r):
 		var dir = randi() % 4 + 1
 		for i in range(dir):
 			var move_dir = randi() % 4
-			var len = 20 + randi() % 80
+			var len = 20 + randi() % 60
 			road_counter += 1
 			if move_dir == 0:
 				for j in range(len):
