@@ -7,6 +7,7 @@
 size = Vector3(0.343, 0.5, 0.777)
 
 [node name="NPC" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.354662, 0)
 script = ExtResource("1_6poeg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
