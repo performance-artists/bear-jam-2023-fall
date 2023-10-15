@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy34vbah43yrr"]
+[gd_scene load_steps=8 format=3 uid="uid://dy34vbah43yrr"]
 
+[ext_resource type="Script" path="res://Scripts/ShowPassenger.gd" id="1_cy7jc"]
 [ext_resource type="PackedScene" uid="uid://dftuaugl4pmeg" path="res://Assets/low poly guy.glb" id="1_y6jtf"]
 [ext_resource type="Script" path="res://Scripts/PickupPassenger.gd" id="2_h85pk"]
 [ext_resource type="PackedScene" uid="uid://dt7nn567plhht" path="res://Assets/money_bag.glb" id="3_74xkl"]
@@ -9,6 +10,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_62vk4"]
 
 [node name="Passenger" type="Node3D"]
+script = ExtResource("1_cy7jc")
 
 [node name="low poly guy" parent="." instance=ExtResource("1_y6jtf")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)

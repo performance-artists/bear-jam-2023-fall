@@ -1,8 +1,5 @@
 extends Area3D
 
-@onready var passenger = $".."
-
 func _on_body_entered(body):
-	if body.name == "Car":
+	if body.name == "Car" and not GlobalPassenger.has_passenger:
 		GlobalPassenger.has_passenger = true
-		passenger.queue_free()

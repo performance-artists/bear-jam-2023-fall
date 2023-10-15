@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd5y7ogcpod60"]
+
+[ext_resource type="Script" path="res://Scripts/ShowDestination.gd" id="1_k1mel"]
+[ext_resource type="Script" path="res://Player/DropPassenger.gd" id="2_h8n54"]
+[ext_resource type="PackedScene" uid="uid://dxjq4jum31mar" path="res://Assets/simple_red_arrow.glb" id="2_ulsws"]
+[ext_resource type="AudioStream" uid="uid://cbfnocufjupha" path="res://Audio/Task Completed.mp3" id="4_jpxts"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mqk1j"]
+
+[node name="Destination" type="Node3D"]
+script = ExtResource("1_k1mel")
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("2_h8n54")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.04, 0, 0, 0.52345)
+shape = SubResource("BoxShape3D_mqk1j")
+
+[node name="simple_red_arrow" parent="Area3D" instance=ExtResource("2_ulsws")]
+transform = Transform3D(0.212132, 0, -0.296985, 0, 0.4, 0, 0.212132, 0, 0.296985, 0, 1.6, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jpxts")
+volume_db = 3.0
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

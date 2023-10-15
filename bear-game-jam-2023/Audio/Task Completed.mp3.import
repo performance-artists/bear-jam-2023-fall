@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbfnocufjupha"
+path="res://.godot/imported/Task Completed.mp3-081a8d477c4abe4870fa1a24c5f652a3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Task Completed.mp3"
+dest_files=["res://.godot/imported/Task Completed.mp3-081a8d477c4abe4870fa1a24c5f652a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
