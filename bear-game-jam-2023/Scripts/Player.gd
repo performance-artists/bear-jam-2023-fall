@@ -11,6 +11,7 @@ extends RigidBody3D
 @onready var car_taxi = $CarMesh/RootNode/car_taxi
 @onready var car_taxi_destroyed = $CarMesh/RootNode/car_taxi_destroyed
 @onready var explosion = $Explosion
+@onready var smoke = $Smoke
 
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -40,6 +41,7 @@ var destroyed = false
 func _ready():
 	starting_running_sfx_volume = running_sfx_player.volume_db
 	randomize()
+	smoke.emitting = false
 
 func _physics_process(delta):
 	car_mesh.position = sphere_offset
@@ -66,6 +68,9 @@ func _physics_process(delta):
 		running_sfx_player.volume_db = starting_running_sfx_volume - 80
 
 func _process(delta):
+	if GlobalHealth.value <= 40:
+		smoke.emitting = true
+	
 	brake_sfx_timer -= delta
 	acceleration -= 1
 	if acceleration < 15:

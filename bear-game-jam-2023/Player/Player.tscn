@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bymfhnfsqidp2"]
+[gd_scene load_steps=42 format=3 uid="uid://bymfhnfsqidp2"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Player/vfx_camera.gd" id="6_w2o1n"]
 [ext_resource type="AudioStream" uid="uid://ca1irf8qxe3ti" path="res://Audio/Explosion.mp3" id="9_85k0n"]
 [ext_resource type="AudioStream" uid="uid://ddu8ct6d0f12" path="res://Audio/Car Running.ogg" id="9_y6c3i"]
+[ext_resource type="PackedScene" path="res://Player/smoke.tscn" id="10_n7aag"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y3htr"]
 bounce = 0.1
@@ -570,6 +571,8 @@ volume_db = -10.0
 
 [node name="Explosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_85k0n")
+
+[node name="Smoke" parent="." instance=ExtResource("10_n7aag")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
