@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=37 format=3 uid="uid://c0sq34vnj0wvy"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
@@ -32,12 +32,60 @@ background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_j6rru")
 ambient_light_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oafiw"]
+[sub_resource type="Animation" id="Animation_55tv3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iiw07"]
+[sub_resource type="Animation" id="Animation_66rvo"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title:label_settings")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqwrb"]
+_data = {
+"RESET": SubResource("Animation_55tv3"),
+"fade": SubResource("Animation_66rvo")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_moxfs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mv3j6"]
 texture = ExtResource("21_3twpm")
 
-[sub_resource type="FontFile" id="FontFile_yfu20"]
+[sub_resource type="FontFile" id="FontFile_in8ym"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -542,27 +590,30 @@ cache/0/19/0/kerning_overrides/17/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id="Theme_03okj"]
-default_font = SubResource("FontFile_yfu20")
+[sub_resource type="Theme" id="Theme_diiiy"]
+default_font = SubResource("FontFile_in8ym")
 default_font_size = 20
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2qq8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6weg"]
 texture = ExtResource("16_7j04j")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ngju"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p1cs"]
 bg_color = Color(0.862745, 0, 0.219608, 0.309804)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2uv3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vea75"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w04o"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bitwu"]
 bg_color = Color(0, 0, 0, 1)
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrd3h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvbju"]
 bg_color = Color(0, 0.937255, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fin00"]
+bg_color = Color(1, 0.937255, 0, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_wvy54")
@@ -2857,6 +2908,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+root_node = NodePath("../ColorRect")
+libraries = {
+"": SubResource("AnimationLibrary_bqwrb")
+}
+
 [node name="XP" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = 2
@@ -2869,7 +2935,7 @@ offset_bottom = -4.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_oafiw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_moxfs")
 text = "0"
 vertical_alignment = 1
 script = ExtResource("4_w71t3")
@@ -2886,7 +2952,7 @@ offset_bottom = 114.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_oafiw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_moxfs")
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -2918,7 +2984,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_iiw07")
+theme_override_styles/panel = SubResource("StyleBoxTexture_mv3j6")
 
 [node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
@@ -2933,8 +2999,10 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_03okj")
+theme = SubResource("Theme_diiiy")
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
+theme_override_font_sizes/font_size = 30
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
@@ -2965,7 +3033,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_b2qq8")
+theme_override_styles/panel = SubResource("StyleBoxTexture_q6weg")
 
 [node name="Word" type="Label" parent="UI/PassengerDialogue"]
 layout_mode = 1
@@ -2980,8 +3048,10 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_03okj")
+theme = SubResource("Theme_diiiy")
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
+theme_override_font_sizes/font_size = 30
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
@@ -2994,7 +3064,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7ngju")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7p1cs")
 script = ExtResource("8_ng758")
 
 [node name="Title" type="Label" parent="UI/Lose"]
@@ -3012,7 +3082,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_m2uv3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vea75")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -3032,7 +3102,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_m2uv3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vea75")
 text = "POINTS =  0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -3061,8 +3131,21 @@ offset_left = 18.0
 offset_top = 24.0
 offset_right = 338.0
 offset_bottom = 66.0
-theme_override_styles/background = SubResource("StyleBoxFlat_2w04o")
-theme_override_styles/fill = SubResource("StyleBoxFlat_vrd3h")
+theme_override_styles/background = SubResource("StyleBoxFlat_bitwu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rvbju")
+value = 50.0
+rounded = true
+show_percentage = false
+script = ExtResource("17_i4yfj")
+
+[node name="Nitro" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 338.0
+offset_bottom = 126.0
+theme_override_styles/background = SubResource("StyleBoxFlat_bitwu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fin00")
 value = 50.0
 rounded = true
 show_percentage = false
@@ -3070,6 +3153,5 @@ script = ExtResource("17_i4yfj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("20_k3icx")
-volume_db = -5.0
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]

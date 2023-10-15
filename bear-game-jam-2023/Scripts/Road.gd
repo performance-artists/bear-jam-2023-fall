@@ -7,12 +7,13 @@ var road_counter = 0
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
 var fbx_road = preload("res://Assets/CarsAndCity/road_straight.fbx")
 var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
+
 var node_building = preload("res://Player/Building.tscn")
 
 func bfs(width: int, height: int, r):
 	var q = []
 	q.push_back(Vector2(width / 2, height / 2))
-	
+
 	while q.size() > 0:
 		var top = q[0]
 		q.pop_front()
@@ -54,7 +55,6 @@ func bfs(width: int, height: int, r):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var size = 4
-	var offset = Vector3(map_width,0, map_height) * size / 2
 	var r = []
 	for i in range(map_height):
 		var t = []
@@ -66,11 +66,11 @@ func _ready():
 		for j in range(1,len(r[i]) - 1):
 			if r[i][j] == 0:
 				var base = fbx_base.instantiate()
-				base.position = Vector3(i * size, 0, j * size) - offset
+				base.position = Vector3(i * size, 0, j * size)
 				var chance = randi_range(0,5)
 				if chance == 0:
 					var building = node_building.instantiate()
-					building.position = Vector3(i * size, 0, j * size) - offset
+					building.position = Vector3(i * size, 0, j * size)
 					add_child(building)
 					building.scale = Vector3(2,2,2)
 				base.scale = Vector3(2,2,2)
@@ -85,7 +85,7 @@ func _ready():
 					road.rotation.y = PI / 2
 				else:
 					road = fbx_road.instantiate()
-				road.position = Vector3(i * size, 0, j * size) - offset
+				road.position = Vector3(i * size, 0, j * size)
 				road.scale = Vector3(2,2,2)
 				add_child(road)
 	var nav_region = get_node("/root/World/NavigationRegion3D")
