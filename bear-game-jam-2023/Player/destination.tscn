@@ -22,6 +22,6 @@ transform = Transform3D(0.212132, 0, -0.296985, 0, 0.4, 0, 0.212132, 0, 0.296985
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jpxts")
-volume_db = 3.0
+volume_db = 7.0
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

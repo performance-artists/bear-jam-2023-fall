@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="2_mnrjs"]
 [ext_resource type="Script" path="res://Scripts/DirectionArrow.gd" id="3_acilv"]
 [ext_resource type="Script" path="res://Scripts/ShowTimer.gd" id="3_fe0pv"]
+[ext_resource type="Script" path="res://Scripts/SpawnCops.gd" id="4_0ojbr"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="4_o5b8e"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="5_8b3ow"]
-[ext_resource type="PackedScene" uid="uid://b4uauqf7numto" path="res://Player/Cop.tscn" id="6_7qrll"]
 [ext_resource type="Script" path="res://Scripts/Lose.gd" id="7_bbmdc"]
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="7_heb2f"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="7_mm8x8"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 [ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="18_dre28"]
 [ext_resource type="PackedScene" uid="uid://cd5y7ogcpod60" path="res://Player/destination.tscn" id="20_klfng"]
-[ext_resource type="PackedScene" uid="uid://boab4a4tr8bdx" path="res://Player/health_box.tscn" id="22_sbjhc"]
+[ext_resource type="PackedScene" path="res://Scenes/health_box.tscn" id="22_sbjhc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
@@ -668,34 +668,8 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, -1, 0, 1, 2.22045e-16, 0, 0, 0)
 
 [node name="Object_8" type="Node3D" parent="Car/simple_red_arrow2/Sketchfab_model/e1493ad87f484fd28e50762a5ddbb42b_fbx/RootNode/Sun/Object_7"]
 
-[node name="Polices" type="Node3D" parent="."]
-
-[node name="Cop" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 12.706)
-
-[node name="Cop2" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11093, 0.368642, 12.706)
-
-[node name="Cop3" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 13.9329)
-
-[node name="Cop4" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90895, 0.368642, 14.1259)
-
-[node name="Cop5" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 15.1788)
-
-[node name="Cop6" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96845, 0.368642, 15.1788)
-
-[node name="Cop7" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93478, 0.368642, 12.706)
-
-[node name="Cop8" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93478, 0.368642, 14.0016)
-
-[node name="Cop9" parent="Polices" instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.81304, 0.368642, 15.1306)
+[node name="PoliceSpawner" type="Node3D" parent="."]
+script = ExtResource("4_0ojbr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_heb2f")
@@ -1011,7 +985,6 @@ script = ExtResource("9_plmg2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("18_dre28")
-volume_db = -5.0
 
 [node name="Passenger" parent="." instance=ExtResource("16_npp4f")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28991, 0.186349, -3.5068)
