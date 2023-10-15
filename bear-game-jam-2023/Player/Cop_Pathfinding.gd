@@ -24,7 +24,8 @@ func _physics_process(delta):
 		direction = direction.normalized()
 		if next_position.distance_to(global_position) > 1:
 			look_at(next_position,Vector3.UP)
-			
+		if global_position.distance_to(Target.global_position) < 4:
+			GlobalHealth.value -= 0.005
 		velocity = velocity.lerp(direction * speed , accel * delta)
 		move_and_slide()
 		

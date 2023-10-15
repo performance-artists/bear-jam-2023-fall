@@ -926,7 +926,7 @@ text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
 
-[node name="Lose" type="Panel" parent="UI" node_paths=PackedStringArray("taxi_theme_player", "game_over_player")]
+[node name="Lose" type="Panel" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -936,8 +936,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bqhey")
 script = ExtResource("15_y2i04")
-taxi_theme_player = NodePath("../../TaxiThemePlayer")
-game_over_player = NodePath("../../GameOverThemePlayer")
 
 [node name="Title" type="Label" parent="UI/Lose"]
 layout_mode = 1
