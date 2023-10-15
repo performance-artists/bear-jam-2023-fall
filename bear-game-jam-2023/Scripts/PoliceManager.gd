@@ -6,7 +6,6 @@ var current_police_total = 0
 
 var cooldown = 0
 func _process(delta):
-	print(current_police_total)
 	cooldown += delta
 	if cooldown > 30:
 		cooldown = 0

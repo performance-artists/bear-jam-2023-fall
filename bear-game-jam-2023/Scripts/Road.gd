@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var map_width = 200
-@export var map_height = 200
+@export var map_width = 100
+@export var map_height = 100
 var road_counter = 0
 
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
@@ -100,6 +100,4 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
-
-func _process(delta):
-	pass
+	print("done")
