@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://boab4a4tr8bdx"]
+
+[ext_resource type="PackedScene" uid="uid://bj8f1nhx70gco" path="res://Assets/health/source/HealthBox.fbx" id="1_2h2n1"]
+
+[node name="HealthBox" instance=ExtResource("1_2h2n1")]

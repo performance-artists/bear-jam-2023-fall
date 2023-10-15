@@ -4,16 +4,16 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bj8f1nhx70gco"
-path="res://.godot/imported/Health.fbx-1c7e85da79e6e35e6d945248ff211d72.scn"
+path="res://.godot/imported/HealthBox.fbx-1c1d996bd91e8f0cd34f274410845e0b.scn"
 
 [deps]
 
-source_file="res://Assets/health/source/Health.fbx"
-dest_files=["res://.godot/imported/Health.fbx-1c7e85da79e6e35e6d945248ff211d72.scn"]
+source_file="res://Assets/health/source/HealthBox.fbx"
+dest_files=["res://.godot/imported/HealthBox.fbx-1c1d996bd91e8f0cd34f274410845e0b.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
+nodes/root_type="Area3D"
 nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
