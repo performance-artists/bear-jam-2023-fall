@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=33 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
@@ -13,9 +13,12 @@
 [ext_resource type="Script" path="res://ToMenu.gd" id="8_xircf"]
 [ext_resource type="Script" path="res://Scripts/ShowHealth.gd" id="9_plmg2"]
 [ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="10_7pi84"]
+[ext_resource type="Texture2D" uid="uid://cool6c5mbq1c4" path="res://Assets/Passenger.jpg" id="12_h0bm8"]
+[ext_resource type="Script" path="res://Scripts/ShowPassengerDialogue.gd" id="13_i0rej"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="15_abbnw"]
 [ext_resource type="PackedScene" uid="uid://dy34vbah43yrr" path="res://Player/Passenger.tscn" id="16_npp4f"]
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
+[ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="18_dre28"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
@@ -546,6 +549,9 @@ cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 default_font = SubResource("FontFile_yfu20")
 default_font_size = 20
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5qor"]
+texture = ExtResource("12_h0bm8")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgwco"]
 bg_color = Color(0.862745, 0, 0.219608, 0.309804)
 
@@ -734,6 +740,7 @@ vertical_alignment = 1
 script = ExtResource("3_fe0pv")
 
 [node name="DriverDialogue" type="Panel" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -761,6 +768,53 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_v2p1t")
 
 [node name="Word" type="Label" parent="UI/DriverDialogue"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -56.0
+offset_right = -13.0
+offset_bottom = 56.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_dxdnf")
+theme_override_fonts/font = ExtResource("2_mnrjs")
+text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
+autowrap_mode = 2
+uppercase = true
+
+[node name="PassengerDialogue" type="Panel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -245.5
+offset_top = -144.0
+offset_right = 245.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("13_i0rej")
+
+[node name="Avatar" type="Panel" parent="UI/PassengerDialogue"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -62.5
+offset_right = 125.0
+offset_bottom = 62.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h5qor")
+
+[node name="Word" type="Label" parent="UI/PassengerDialogue"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -860,6 +914,10 @@ value = 50.0
 rounded = true
 show_percentage = false
 script = ExtResource("9_plmg2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource("18_dre28")
+volume_db = -5.0
 
 [node name="Passenger" parent="." instance=ExtResource("16_npp4f")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.43927, 0.186349, 4.63509)

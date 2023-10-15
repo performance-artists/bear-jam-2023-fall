@@ -10,6 +10,7 @@ extends RigidBody3D
 @onready var running_sfx_player = $RunningSfxPlayer
 @onready var car_taxi = $CarMesh/RootNode/car_taxi
 @onready var car_taxi_destroyed = $CarMesh/RootNode/car_taxi_destroyed
+@onready var explosion = $Explosion
 
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -30,6 +31,8 @@ var starting_running_sfx_volume
 var brake_sfx_timer = 0
 var prev_linear_velocity = [0, 0, 0]
 
+var destroyed = false
+
 @export var brake_sfx_1: AudioStream
 @export var brake_sfx_2: AudioStream
 @export var brake_sfx_3: AudioStream
@@ -43,15 +46,20 @@ func _physics_process(delta):
 	#Crash
 	if (abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1 < 0):
 		GlobalHealth.value -= abs(abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1)
+		explosion.play()
 	prev_linear_velocity = linear_velocity
 	#Move
 	if GlobalHealth.value > 0:
+		destroyed = false
 		apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 		car_taxi_destroyed.hide()
 		car_taxi.show()
 	else:
-		car_taxi_destroyed.show()
-		car_taxi.hide()
+		if not destroyed:
+			car_taxi_destroyed.show()
+			car_taxi.hide()
+			explosion.play()
+			destroyed = true
 	if speed_input != 0:
 		running_sfx_player.volume_db = starting_running_sfx_volume
 	else:

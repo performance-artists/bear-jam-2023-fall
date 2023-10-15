@@ -23,6 +23,5 @@ shape = SubResource("BoxShape3D_bk73y")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_u50db")
-volume_db = -5.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
