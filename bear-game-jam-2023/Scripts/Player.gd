@@ -16,7 +16,7 @@ extends RigidBody3D
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
 # Engine power
-var acceleration = 15.0
+var acceleration = 12.0
 # Turn amount, in degrees
 var steering = 18.0
 # How quickly the car turns
@@ -72,8 +72,8 @@ func _process(delta):
 	
 	brake_sfx_timer -= delta
 	acceleration -= 1
-	if acceleration < 15:
-		acceleration = 15
+	if acceleration < 12:
+		acceleration = 12
 		using_skill = false
 	#if not ground_ray.is_colliding():
 	#	return
@@ -102,7 +102,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") and GlobalNitro.value > 50:
 		print("GO")
 		GlobalNitro.value -= 50
-		acceleration = 40
+		acceleration = 30
 		using_skill = true
 		
 func get_skill_status():
