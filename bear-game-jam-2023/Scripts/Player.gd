@@ -138,3 +138,4 @@ func _on_body_entered(body):
 			body.crashed = true
 			GlobalXP.value += 3
 			GlobalNitro.value += 10
+			PoliceManager.current_police_total -= 1

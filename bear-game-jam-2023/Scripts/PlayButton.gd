@@ -8,4 +8,4 @@ func _ready():
 func _on_pressed():
 	animation_player.play("fade")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file("res://Scenes/Nick.tscn")
+	get_tree().change_scene_to_file("res://Scenes/gen_game.tscn")
