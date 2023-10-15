@@ -131,7 +131,7 @@ _data = {
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2p1t"]
 texture = ExtResource("5_8b3ow")
 
-[sub_resource type="FontFile" id="FontFile_g7grw"]
+[sub_resource type="FontFile" id="FontFile_4pjmf"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -637,7 +637,7 @@ cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_dxdnf"]
-default_font = SubResource("FontFile_g7grw")
+default_font = SubResource("FontFile_4pjmf")
 default_font_size = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5qor"]
