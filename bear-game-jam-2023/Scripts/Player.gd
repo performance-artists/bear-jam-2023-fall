@@ -25,6 +25,7 @@ var speed_input = 0
 var turn_input = 0
 var using_skill = false
 var starting_running_sfx_volume
+var brake_sfx_timer = 0
 
 @export var brake_sfx_1: AudioStream
 @export var brake_sfx_2: AudioStream
@@ -38,12 +39,13 @@ func _physics_process(delta):
 	car_mesh.position = sphere_offset
 	#if ground_ray.is_colliding():
 	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
-	if speed_input > 0:
+	if speed_input != 0:
 		running_sfx_player.volume_db = starting_running_sfx_volume
 	else:
 		running_sfx_player.volume_db = starting_running_sfx_volume - 80
 
 func _process(delta):
+	brake_sfx_timer -= delta
 	acceleration -= 1
 	if acceleration < 15:
 		acceleration = 15
@@ -86,8 +88,10 @@ func align_with_y(xform, new_y):
 	return xform.orthonormalized()
 
 func play_brake_sfx():
-	if brake_sfx_player.playing:
+	if brake_sfx_timer > 0:
 		return
+		
+	brake_sfx_timer = 5
 
 	var random_number = randi() % 3
 	match(random_number):

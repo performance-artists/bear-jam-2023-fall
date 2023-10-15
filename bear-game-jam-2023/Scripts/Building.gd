@@ -3,6 +3,7 @@ extends StaticBody3D
 const arr = ['A', 'B', 'C', 'D', 'E', 'F', 'H']
 var path = "res://Assets/CarsAndCity/building_%s.fbx"
 var cube = preload("res://Player/cube.tscn")
+var crash_sfx_player = preload("res://Scenes/CrashSfxPlayer.tscn")
 var destroyed = false
 var building_index = 'A'
 var building_obj
@@ -18,6 +19,7 @@ func _ready():
 func collapse():
 	var size = get_building_size()
 	building_obj.queue_free()
+	crash_sfx_player.instantiate()
 	spawn_cube(size, building_obj.position)
 
 func get_building_size():

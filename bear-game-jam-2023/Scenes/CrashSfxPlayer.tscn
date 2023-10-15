@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rwmqpcqfc1x4"]
+
+[ext_resource type="Script" path="res://Scripts/CrashSfxPlayer.gd" id="1_vikax"]
+
+[node name="CrashSfxPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_vikax")
