@@ -42,6 +42,8 @@ func _ready():
 	starting_running_sfx_volume = running_sfx_player.volume_db
 	randomize()
 	smoke.emitting = false
+	contact_monitor = true
+	max_contacts_reported = 1
 
 func _physics_process(delta):
 	car_mesh.position = sphere_offset
@@ -129,3 +131,8 @@ func play_brake_sfx():
 			brake_sfx_player.stream = brake_sfx_3
 
 	brake_sfx_player.play()
+
+
+func _on_body_entered(body):
+	if (body.name.substr(0,3) == "Cop") and (abs(linear_velocity.x) + abs(linear_velocity.z) > 3):
+		body.crashed = true

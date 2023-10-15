@@ -224,18 +224,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8qr3n")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo6xu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85bq1"]
 albedo_color = Color(0.988235, 0.368627, 0.0784314, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fg4we"]
-material = SubResource("StandardMaterial3D_wo6xu")
+material = SubResource("StandardMaterial3D_85bq1")
 size = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3yxv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nyvk"]
 albedo_color = Color(0.988235, 0.368627, 0.0784314, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gry60"]
-material = SubResource("StandardMaterial3D_w3yxv")
+material = SubResource("StandardMaterial3D_0nyvk")
 size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="Animation" id="Animation_pjeli"]
