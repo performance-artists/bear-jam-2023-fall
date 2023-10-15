@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 [ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="18_dre28"]
 [ext_resource type="PackedScene" uid="uid://cd5y7ogcpod60" path="res://Player/destination.tscn" id="20_klfng"]
+[ext_resource type="PackedScene" uid="uid://boab4a4tr8bdx" path="res://Scenes/health_box.tscn" id="22_sbjhc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
@@ -1018,5 +1019,17 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.289
 [node name="Destination" parent="." instance=ExtResource("20_klfng")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28965, 0.186, -15.8733)
 visible = false
+
+[node name="HealthBox" parent="." instance=ExtResource("22_sbjhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.980521, 0.43311, -17.9432)
+
+[node name="HealthBox2" parent="." instance=ExtResource("22_sbjhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05628, 0.400367, -20.1674)
+
+[node name="HealthBox3" parent="." instance=ExtResource("22_sbjhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68736, 0.474251, -20.0639)
+
+[node name="HealthBox4" parent="." instance=ExtResource("22_sbjhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27942, 0.374643, -22.743)
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]
