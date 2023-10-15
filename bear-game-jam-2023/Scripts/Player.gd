@@ -48,7 +48,7 @@ func _physics_process(delta):
 	car_mesh.position = sphere_offset
 	#Crash
 	if (abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1 < 0):
-		GlobalHealth.value -= abs(abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1)
+		GlobalHealth.value -= 1.2 * abs(abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1)
 		explosion.play()
 	prev_linear_velocity = linear_velocity
 	#Move
