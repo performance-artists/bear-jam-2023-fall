@@ -1,6 +1,5 @@
-[gd_scene load_steps=27 format=3 uid="uid://defjvrch3ym5g"]
+[gd_scene load_steps=26 format=3 uid="uid://defjvrch3ym5g"]
 
-[ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_iawm3"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="2_kywbo"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="3_h28lh"]
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="4_kfabq"]
@@ -12,11 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="10_pfx0i"]
 [ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="12_ofdnc"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="13_4yl3e"]
+[ext_resource type="PackedScene" path="res://Models/road_junction_new.fbx" id="14_p7nft"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="14_y0npv"]
 [ext_resource type="Script" path="res://Scripts/ShowHealth.gd" id="15_xhn34"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
-albedo_texture = ExtResource("1_iawm3")
 
 [sub_resource type="Sky" id="Sky_6kve4"]
 
@@ -563,11 +560,6 @@ bg_color = Color(0, 0.937255, 0, 1)
 
 [node name="Map" type="Node3D" parent="."]
 
-[node name="Floor" type="CSGBox3D" parent="Map"]
-material_override = SubResource("StandardMaterial3D_y342e")
-use_collision = true
-size = Vector3(100, 0.001, 100)
-
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
@@ -829,5 +821,8 @@ value = 50.0
 rounded = true
 show_percentage = false
 script = ExtResource("15_xhn34")
+
+[node name="road_junction_new" parent="." instance=ExtResource("14_p7nft")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, 0, 21)
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]
