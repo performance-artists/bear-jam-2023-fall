@@ -8,6 +8,8 @@ extends RigidBody3D
 @onready var particle = $CarMesh/RootNode/car_taxi/Particle
 @onready var brake_sfx_player = $BrakeSfxPlayer
 @onready var running_sfx_player = $RunningSfxPlayer
+@onready var car_taxi = $CarMesh/RootNode/car_taxi
+@onready var car_taxi_destroyed = $CarMesh/RootNode/car_taxi_destroyed
 
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -45,6 +47,11 @@ func _physics_process(delta):
 	#Move
 	if GlobalHealth.value > 0:
 		apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
+		car_taxi_destroyed.hide()
+		car_taxi.show()
+	else:
+		car_taxi_destroyed.show()
+		car_taxi.hide()
 	if speed_input != 0:
 		running_sfx_player.volume_db = starting_running_sfx_volume
 	else:

@@ -49,4 +49,4 @@ func _on_area_3d_body_entered(body):
 		collapse()
 		audio_stream_player.play()
 		GlobalXP.value += 5
-		GlobalHealth.value -= 10
+		GlobalHealth.value -= 2
