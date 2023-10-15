@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var map_width = 100
-@export var map_height = 100
+@export var map_width = 150
+@export var map_height = 150
 var road_counter = 0
 
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
@@ -9,7 +9,7 @@ var fbx_road = preload("res://Assets/CarsAndCity/road_straight.fbx")
 var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
 var healthbox = preload("res://Player/health_box.tscn")
 var node_building = preload("res://Player/Building.tscn")
-var npc_node = preload("res://Player/car_generator.tscn")
+var npc_node = preload("res://Player/npc.tscn")
 
 func bfs(width: int, height: int, r):
 	var q = []
@@ -74,8 +74,8 @@ func _ready():
 				if chance == 0:
 					var building = node_building.instantiate()
 					building.position = Vector3(i * size, 0, j * size) - offset
-					add_child(building)
 					building.scale = Vector3(2,2,2)
+					add_child(building)
 				base.scale = Vector3(2,2,2)
 				add_child(base)
 			else:
@@ -131,3 +131,10 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
+				var chance = randi_range(0,6)
+				if chance == 0:
+					var npc = npc_node.instantiate()
+					npc.position = Vector3(i * size, 0.5, j * size) - offset
+					var rot_arr = [0.5,1,1.5,2,2.5,3]
+					npc.rotation.y = PI / rot_arr.pick_random()
+					add_child(npc)

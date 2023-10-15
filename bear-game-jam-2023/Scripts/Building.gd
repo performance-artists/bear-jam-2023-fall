@@ -33,9 +33,9 @@ func get_building_size():
 
 func spawn_cube(dimension, obj_position):
 	const CUBE_SIZE = Vector3(0.2, 0.2, 0.2)
-	for x in range(0,dimension.x * 4,2):
-		for y in range(dimension.y, dimension.y * 4,2):
-			for z in range(0,dimension.z * 2,2):
+	for x in range(0,dimension.x * 4):
+		for y in range(dimension.y, dimension.y * 4):
+			for z in range(0,dimension.z * 2):
 				var cube_instance = cube.instantiate()
 				cube_instance.position = Vector3(x, y, z) * CUBE_SIZE
 				cube_instance.position.x -= 1
