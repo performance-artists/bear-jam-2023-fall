@@ -277,4 +277,5 @@ volume_db = -18.0
 autoplay = true
 
 [node name="BrakeSfxPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xo5ny")
 volume_db = -10.0
