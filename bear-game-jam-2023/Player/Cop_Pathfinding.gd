@@ -6,8 +6,6 @@ const accel = 10.0
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var Target = $"../../Car"
 
-
-
 func _physics_process(delta):
 	
 	var direction = Vector3()
