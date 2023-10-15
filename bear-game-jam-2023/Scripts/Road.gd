@@ -88,9 +88,6 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size)
 				road.scale = Vector3(2,2,2)
 				add_child(road)
-	var nav_region = get_node("/root/World/NavigationRegion3D")
-	var nav_region_script = nav_region.get_script()
-	nav_region_script._bake()
 
 func _process(delta):
 	pass
