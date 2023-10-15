@@ -4,9 +4,10 @@
 [ext_resource type="AudioStream" uid="uid://ca1irf8qxe3ti" path="res://Audio/Explosion.mp3" id="2_u50db"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_van7t"]
-size = Vector3(0.9, 1, 0.9)
+size = Vector3(1.9, 1, 1.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bk73y"]
+size = Vector3(2, 1, 2)
 
 [node name="Building" type="StaticBody3D"]
 script = ExtResource("1_i4n3t")

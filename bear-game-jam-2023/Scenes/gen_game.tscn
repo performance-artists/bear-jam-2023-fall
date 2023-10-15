@@ -747,6 +747,7 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, -1, 0, 1, 2.22045e-16, 0, 0, 0)
 [node name="Object_8" type="Node3D" parent="Car/simple_red_arrow2/Sketchfab_model/e1493ad87f484fd28e50762a5ddbb42b_fbx/RootNode/Sun/Object_7"]
 
 [node name="TaxiThemePlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("9_y0ho6")
 autoplay = true
 
@@ -926,7 +927,7 @@ text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
 
-[node name="Lose" type="Panel" parent="UI"]
+[node name="Lose" type="Panel" parent="UI" node_paths=PackedStringArray("taxi_theme_player", "game_over_player")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -936,6 +937,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bqhey")
 script = ExtResource("15_y2i04")
+taxi_theme_player = NodePath("../../TaxiThemePlayer")
+game_over_player = NodePath("../../GameOverThemePlayer")
 
 [node name="Title" type="Label" parent="UI/Lose"]
 layout_mode = 1
