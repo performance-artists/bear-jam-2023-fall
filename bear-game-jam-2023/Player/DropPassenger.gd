@@ -7,5 +7,5 @@ func _on_body_entered(body):
 		GlobalPassenger.has_passenger = false
 		audio_stream_player.play()
 		GlobalXP.value += 20
-		GlobalTimer.value += 15
+		GlobalTimer.value += 30
 		GlobalNitro.value += 20
