@@ -27,7 +27,7 @@ func bfs(width: int, height: int, r):
 		var dir = randi() % 4 + 1
 		for i in range(dir):
 			var move_dir = randi() % 4
-			var len = 20 + randi() % 120
+			var len = 20 + randi() % 30
 			road_counter += 1
 			if move_dir == 0:
 				for j in range(len):
@@ -80,8 +80,18 @@ func _ready():
 			else:
 				var count = r[i-1][j] + r[i+1][j] + r[i][j-1] + r[i][j+1]
 				var road
-				if count > 2:
+				if count > 3:
 					road = fbx_road_junction.instantiate()
+				elif count == 3 and r[i][j-1] == 0:
+					road = fbx_road.instantiate()
+					road.rotation.y = PI / 2
+				elif count == 3 and r[i][j+1] == 0:
+					road = fbx_road.instantiate()
+					road.rotation.y = PI / 2
+				elif count == 3 and r[i-1][j] == 0:
+					road = fbx_road.instantiate()
+				elif count == 3 and r[i+1][j] == 0:
+					road = fbx_road.instantiate()
 				elif r[i-1][j] + r[i+1][j] > 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
