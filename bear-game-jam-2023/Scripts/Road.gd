@@ -10,6 +10,7 @@ var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
 
 var node_building = preload("res://Player/Building.tscn")
 
+
 func bfs(width: int, height: int, r):
 	var q = []
 	q.push_back(Vector2(width / 2, height / 2))
@@ -56,6 +57,7 @@ func bfs(width: int, height: int, r):
 func _ready():
 	var size = 4
 	var r = []
+	var offset = Vector3(map_width, 0, map_height) * size / 2
 	for i in range(map_height):
 		var t = []
 		t.resize(map_width)
@@ -66,11 +68,11 @@ func _ready():
 		for j in range(1,len(r[i]) - 1):
 			if r[i][j] == 0:
 				var base = fbx_base.instantiate()
-				base.position = Vector3(i * size, 0, j * size)
+				base.position = Vector3(i * size, 0, j * size) - offset
 				var chance = randi_range(0,5)
 				if chance == 0:
 					var building = node_building.instantiate()
-					building.position = Vector3(i * size, 0, j * size)
+					building.position = Vector3(i * size, 0, j * size) - offset
 					add_child(building)
 					building.scale = Vector3(2,2,2)
 				base.scale = Vector3(2,2,2)
@@ -85,7 +87,7 @@ func _ready():
 					road.rotation.y = PI / 2
 				else:
 					road = fbx_road.instantiate()
-				road.position = Vector3(i * size, 0, j * size)
+				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
 	var nav_region = get_node("/root/World/NavigationRegion3D")
