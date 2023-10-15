@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2n1x"]
 size = Vector3(0.343, 0.5, 0.777)
 
-[node name="NPC" type="Area3D"]
+[node name="NPC" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.354662, 0)
 script = ExtResource("1_6poeg")
 
@@ -15,5 +15,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.0826873, 2.08
 shape = SubResource("BoxShape3D_h2n1x")
 
 [node name="car_hatchback" parent="." instance=ExtResource("1_btx1g")]
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
