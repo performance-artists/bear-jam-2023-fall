@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bjhkrk4lorxlu"]
+[gd_scene load_steps=42 format=3 uid="uid://bjhkrk4lorxlu"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_18eif"]
 [ext_resource type="Script" path="res://Scripts/NavMeshBaker.gd" id="2_1uibd"]
@@ -76,12 +76,60 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m3m0o")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdnvf"]
+[sub_resource type="Animation" id="Animation_55tv3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ptkpg"]
+[sub_resource type="Animation" id="Animation_66rvo"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title:label_settings")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqwrb"]
+_data = {
+"RESET": SubResource("Animation_55tv3"),
+"fade": SubResource("Animation_66rvo")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufag5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_giq31"]
 texture = ExtResource("14_tx6ib")
 
-[sub_resource type="FontFile" id="FontFile_nsdhw"]
+[sub_resource type="FontFile" id="FontFile_xtx0j"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -586,27 +634,30 @@ cache/0/19/0/kerning_overrides/17/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id="Theme_btfw0"]
-default_font = SubResource("FontFile_nsdhw")
+[sub_resource type="Theme" id="Theme_2su0e"]
+default_font = SubResource("FontFile_xtx0j")
 default_font_size = 20
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c78qd"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x763p"]
 texture = ExtResource("12_ktr5g")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbje3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_771h5"]
 bg_color = Color(0.862745, 0, 0.219608, 0.309804)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fsjl5"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rprs1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqu55"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diuce"]
 bg_color = Color(0, 0, 0, 1)
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deb2d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p85u0"]
 bg_color = Color(0, 0.937255, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1n68"]
+bg_color = Color(1, 0.937255, 0, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_18eif")
@@ -677,6 +728,17 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, -1, 0, 1, 2.22045e-16, 0, 0, 0)
 stream = ExtResource("9_y0ho6")
 autoplay = true
 
+[node name="Passenger" parent="." instance=ExtResource("18_h821x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28991, 0.186349, -3.5068)
+
+[node name="Destination" parent="." instance=ExtResource("19_owmww")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28965, 0.186, -15.8733)
+visible = false
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="CharacterBody3D" parent="Node3D" instance=ExtResource("21_22tv3")]
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -684,6 +746,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+root_node = NodePath("../ColorRect")
+libraries = {
+"": SubResource("AnimationLibrary_bqwrb")
+}
 
 [node name="XP" type="Label" parent="UI"]
 layout_mode = 1
@@ -697,7 +774,7 @@ offset_bottom = -4.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("10_nj8ia")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cdnvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ufag5")
 text = "0"
 vertical_alignment = 1
 script = ExtResource("11_pg8e7")
@@ -714,7 +791,7 @@ offset_bottom = 114.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("10_nj8ia")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cdnvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ufag5")
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -746,7 +823,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ptkpg")
+theme_override_styles/panel = SubResource("StyleBoxTexture_giq31")
 
 [node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
@@ -761,8 +838,10 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_btfw0")
+theme = SubResource("Theme_2su0e")
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("10_nj8ia")
+theme_override_font_sizes/font_size = 30
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
@@ -793,7 +872,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_c78qd")
+theme_override_styles/panel = SubResource("StyleBoxTexture_x763p")
 
 [node name="Word" type="Label" parent="UI/PassengerDialogue"]
 layout_mode = 1
@@ -808,8 +887,10 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_btfw0")
+theme = SubResource("Theme_2su0e")
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("10_nj8ia")
+theme_override_font_sizes/font_size = 30
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
@@ -822,7 +903,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_bbje3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_771h5")
 script = ExtResource("15_y2i04")
 
 [node name="Title" type="Label" parent="UI/Lose"]
@@ -840,7 +921,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("10_nj8ia")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fsjl5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rprs1")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -860,7 +941,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("10_nj8ia")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fsjl5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rprs1")
 text = "POINTS =  0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -889,8 +970,21 @@ offset_left = 18.0
 offset_top = 24.0
 offset_right = 338.0
 offset_bottom = 66.0
-theme_override_styles/background = SubResource("StyleBoxFlat_aqu55")
-theme_override_styles/fill = SubResource("StyleBoxFlat_deb2d")
+theme_override_styles/background = SubResource("StyleBoxFlat_diuce")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p85u0")
+value = 50.0
+rounded = true
+show_percentage = false
+script = ExtResource("17_y1a8x")
+
+[node name="Nitro" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 338.0
+offset_bottom = 126.0
+theme_override_styles/background = SubResource("StyleBoxFlat_diuce")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v1n68")
 value = 50.0
 rounded = true
 show_percentage = false
@@ -898,17 +992,5 @@ script = ExtResource("17_y1a8x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("16_nnjv4")
-volume_db = -5.0
-
-[node name="Passenger" parent="." instance=ExtResource("18_h821x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28991, 0.186349, -3.5068)
-
-[node name="Destination" parent="." instance=ExtResource("19_owmww")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28965, 0.186, -15.8733)
-visible = false
-
-[node name="Node3D" type="Node3D" parent="."]
-
-[node name="CharacterBody3D" parent="Node3D" instance=ExtResource("21_22tv3")]
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]
