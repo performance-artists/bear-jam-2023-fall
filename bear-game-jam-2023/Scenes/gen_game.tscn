@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bjhkrk4lorxlu"]
+[gd_scene load_steps=50 format=3 uid="uid://bjhkrk4lorxlu"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_18eif"]
 [ext_resource type="Script" path="res://Scripts/NavMeshBaker.gd" id="2_1uibd"]
@@ -8,11 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="8_rbluq"]
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="9_y0ho6"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="10_nj8ia"]
+[ext_resource type="Texture2D" uid="uid://tq872fd6x6ni" path="res://Textures/SmokeParticle.png" id="10_thg66"]
 [ext_resource type="Script" path="res://Scripts/ShowPassengerDialogue.gd" id="11_5g4wt"]
-[ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="11_pg8e7"]
 [ext_resource type="Script" path="res://Scripts/PoliceManager.gd" id="11_s83fj"]
 [ext_resource type="Script" path="res://Scripts/ShowTimer.gd" id="12_jvjvh"]
 [ext_resource type="Texture2D" uid="uid://cool6c5mbq1c4" path="res://Assets/Passenger.jpg" id="12_ktr5g"]
+[ext_resource type="AudioStream" uid="uid://nemokjgoku7s" path="res://Audio/Taxi Game Over.wav" id="12_wu82r"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="13_d0p48"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="14_tx6ib"]
 [ext_resource type="Script" path="res://Scripts/Lose.gd" id="15_y2i04"]
@@ -77,6 +78,25 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m3m0o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mruyi"]
+transparency = 1
+albedo_color = Color(0, 1, 0.501961, 1)
+albedo_texture = ExtResource("10_thg66")
+
+[sub_resource type="Curve" id="Curve_mvrgo"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_rvpjy"]
+curve = SubResource("Curve_mvrgo")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fqi4n"]
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_rvpjy")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q004y"]
 
 [sub_resource type="Animation" id="Animation_55tv3"]
 length = 0.001
@@ -726,7 +746,7 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, -1, 0, 1, 2.22045e-16, 0, 0, 0)
 
 [node name="Object_8" type="Node3D" parent="Car/simple_red_arrow2/Sketchfab_model/e1493ad87f484fd28e50762a5ddbb42b_fbx/RootNode/Sun/Object_7"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="TaxiThemePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_y0ho6")
 autoplay = true
 
@@ -735,13 +755,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.289
 
 [node name="Destination" parent="." instance=ExtResource("19_owmww")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28965, 0.186, -15.8733)
-visible = false
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Destination"]
+material_override = SubResource("StandardMaterial3D_mruyi")
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_fqi4n")
+draw_pass_1 = SubResource("PlaneMesh_q004y")
 
 [node name="PoliceSpawner" type="Node3D" parent="."]
 script = ExtResource("21_i45c2")
 
 [node name="SpawnManager" type="Node3D" parent="."]
 script = ExtResource("11_s83fj")
+
+[node name="GameOverThemePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wu82r")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -781,7 +809,6 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qo452")
 text = "0"
 vertical_alignment = 1
-script = ExtResource("11_pg8e7")
 
 [node name="Timer" type="Label" parent="UI"]
 layout_mode = 1
