@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=34 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dy34vbah43yrr" path="res://Player/Passenger.tscn" id="16_npp4f"]
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 [ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="18_dre28"]
+[ext_resource type="PackedScene" uid="uid://cd5y7ogcpod60" path="res://Player/destination.tscn" id="20_klfng"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
@@ -590,7 +591,7 @@ sky_mode = 1
 environment = SubResource("Environment_582hk")
 
 [node name="Car" parent="." instance=ExtResource("18_3vnvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.724066, 3)
 
 [node name="Polices" type="Node3D" parent="."]
 
@@ -920,6 +921,10 @@ stream = ExtResource("18_dre28")
 volume_db = -5.0
 
 [node name="Passenger" parent="." instance=ExtResource("16_npp4f")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.43927, 0.186349, 4.63509)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28991, 0.186349, -3.5068)
+
+[node name="Destination" parent="." instance=ExtResource("20_klfng")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.28965, 0.186, -15.8733)
+visible = false
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]

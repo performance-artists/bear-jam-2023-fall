@@ -15,7 +15,7 @@ var dialogues = [
 	"Scenic  route,  show  me  the  beauty.",
 	"Respect  my  presence,  handle  with  care.",
 	"Impress  me,  drive  with  style.",
-	"Let's  scape  through  driving,  we  will  feel  the  freedom.",
+	"Let's  escape  through  driving,  we  will  feel  the  freedom.",
 	"Vroom  vroom!"
 ]
 
