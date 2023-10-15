@@ -21,6 +21,7 @@ GlobalXP="*res://Scripts/XP.gd"
 GlobalTimer="*res://Scripts/Timer.gd"
 GlobalHealth="*res://Scripts/Health.gd"
 GlobalPassenger="*res://Scripts/Passenger.gd"
+GlobalNitro="*res://Scripts/Nitro.gd"
 
 [dotnet]
 

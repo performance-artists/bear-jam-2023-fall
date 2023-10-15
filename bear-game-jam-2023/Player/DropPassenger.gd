@@ -8,3 +8,4 @@ func _on_body_entered(body):
 		audio_stream_player.play()
 		GlobalXP.value += 20
 		GlobalTimer.value += 15
+		GlobalNitro.value += 20
