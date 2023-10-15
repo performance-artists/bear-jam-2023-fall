@@ -9,6 +9,7 @@ extends Panel
 @export var game_over_player: AudioStreamPlayer
 
 var show_it = true
+var has_played_game_over_theme = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,7 +24,9 @@ func _process(delta):
 		GlobalHealth.value = 0
 		GlobalXP.value = 0
 		taxi_theme_player.stop()
-		game_over_player.play()
+		if !has_played_game_over_theme:
+			game_over_player.play()
+			has_played_game_over_theme = true
 	else:
 		show_it = true
 		self.hide()
