@@ -131,6 +131,6 @@ func play_brake_sfx():
 
 
 func _on_body_entered(body):
-	print(body)
-	if (body.name.substr(0,3) == "Cop") and (abs(linear_velocity.x) + abs(linear_velocity.z) > 3):
+	print(body.name)
+	if (body.name.substr(0,3) == "Cop" or body.name.substr(1,3) == "Cha") and (abs(linear_velocity.x) + abs(linear_velocity.z) > 3):
 		body.crashed = true
