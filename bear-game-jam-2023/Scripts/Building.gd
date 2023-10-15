@@ -17,7 +17,7 @@ func _ready():
 	building_fbx = load(building_path)
 	building_obj = building_fbx.instantiate()
 	add_child(building_obj)
-
+'
 func collapse():
 	var size = get_building_size()
 	building_obj.queue_free()
@@ -40,6 +40,7 @@ func spawn_cube(dimension, obj_position):
 				cube_instance.position = Vector3(x, y, z) * CUBE_SIZE
 				cube_instance.position.x -= 1
 				add_child(cube_instance)
+
 func _on_area_3d_body_entered(body):
 	if body.name == "Car" and not destroyed:
 		destroyed = true
@@ -49,3 +50,4 @@ func _on_area_3d_body_entered(body):
 		GlobalXP.value += 5
 		GlobalHealth.value -= 2
 		GlobalNitro.value += 10
+'
