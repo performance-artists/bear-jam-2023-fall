@@ -1,7 +1,7 @@
 extends Node3D
 
-var spawn_cooldown = 2.5
-var cooldown = 5
+var spawn_cooldown = 5
+var cooldown = 0
 
 var cop_model = load("res://Player/Cop.tscn")
 @onready var Target = $"../Car"

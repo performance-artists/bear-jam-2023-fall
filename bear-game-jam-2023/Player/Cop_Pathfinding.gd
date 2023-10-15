@@ -11,6 +11,8 @@ const accel = 10.0
 var crashed = false
 var delete_cooldown = 0
 
+var stuck_cooldown = 0
+
 func _physics_process(delta):
 	
 	if not crashed:

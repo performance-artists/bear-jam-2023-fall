@@ -132,7 +132,7 @@ func _ready():
 				road.scale = Vector3(2,2,2)
 				add_child(road)
 				var chance = randi_range(0,6)
-				if chance == 0:
+				if chance <= 0.2:
 					var npc = npc_node.instantiate()
 					npc.position = Vector3(i * size, 0.5, j * size) - offset
 					var rot_arr = [0.5,1,1.5,2,2.5,3]
