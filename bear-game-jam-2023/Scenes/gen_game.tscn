@@ -9,10 +9,10 @@
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="9_y0ho6"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="10_nj8ia"]
 [ext_resource type="Script" path="res://Scripts/ShowPassengerDialogue.gd" id="11_5g4wt"]
-[ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="11_pg8e7"]
 [ext_resource type="Script" path="res://Scripts/PoliceManager.gd" id="11_s83fj"]
 [ext_resource type="Script" path="res://Scripts/ShowTimer.gd" id="12_jvjvh"]
 [ext_resource type="Texture2D" uid="uid://cool6c5mbq1c4" path="res://Assets/Passenger.jpg" id="12_ktr5g"]
+[ext_resource type="AudioStream" uid="uid://nemokjgoku7s" path="res://Audio/Taxi Game Over.wav" id="12_wu82r"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="13_d0p48"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="14_tx6ib"]
 [ext_resource type="Script" path="res://Scripts/Lose.gd" id="15_y2i04"]
@@ -726,7 +726,7 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, -1, 0, 1, 2.22045e-16, 0, 0, 0)
 
 [node name="Object_8" type="Node3D" parent="Car/simple_red_arrow2/Sketchfab_model/e1493ad87f484fd28e50762a5ddbb42b_fbx/RootNode/Sun/Object_7"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="TaxiThemePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_y0ho6")
 autoplay = true
 
@@ -742,6 +742,9 @@ script = ExtResource("21_i45c2")
 
 [node name="SpawnManager" type="Node3D" parent="."]
 script = ExtResource("11_s83fj")
+
+[node name="GameOverThemePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wu82r")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -781,7 +784,6 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qo452")
 text = "0"
 vertical_alignment = 1
-script = ExtResource("11_pg8e7")
 
 [node name="Timer" type="Label" parent="UI"]
 layout_mode = 1
@@ -899,7 +901,7 @@ text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
 uppercase = true
 
-[node name="Lose" type="Panel" parent="UI"]
+[node name="Lose" type="Panel" parent="UI" node_paths=PackedStringArray("taxi_theme_player", "game_over_player")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -909,6 +911,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bqhey")
 script = ExtResource("15_y2i04")
+taxi_theme_player = NodePath("../../TaxiThemePlayer")
+game_over_player = NodePath("../../GameOverThemePlayer")
 
 [node name="Title" type="Label" parent="UI/Lose"]
 layout_mode = 1

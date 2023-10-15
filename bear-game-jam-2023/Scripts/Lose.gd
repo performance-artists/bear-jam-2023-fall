@@ -5,6 +5,9 @@ extends Panel
 @onready var timer = $"../Timer"
 @onready var health = $"../Health"
 
+@export var taxi_theme_player: AudioStreamPlayer
+@export var game_over_player: AudioStreamPlayer
+
 var show_it = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,6 +22,8 @@ func _process(delta):
 		self.show()
 		GlobalHealth.value = 0
 		GlobalXP.value = 0
+		taxi_theme_player.stop()
+		game_over_player.play()
 	else:
 		show_it = true
 		self.hide()
