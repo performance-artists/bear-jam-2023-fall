@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://boab4a4tr8bdx"]
+[gd_scene load_steps=4 format=3 uid="uid://crtn7vqh8djbe"]
 
 [ext_resource type="PackedScene" uid="uid://bj8f1nhx70gco" path="res://Assets/health/source/HealthBox.fbx" id="1_2h2n1"]
 [ext_resource type="Script" path="res://Scripts/health_box.gd" id="2_wxf1w"]
