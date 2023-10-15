@@ -9,7 +9,7 @@ func _ready():
 var iskeypressed = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event):
-	if Input.is_key_label_pressed(KEY_SPACE) and not iskeypressed:
+	if Input.is_key_label_pressed(KEY_SPACE) and not iskeypressed and GlobalNitro.value > 50:
 		iskeypressed = true
 		anim.play("SpeedLine")
 		await get_tree().create_timer(3.0).timeout
