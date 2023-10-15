@@ -199,8 +199,9 @@ gravity = Vector3(0, 0.3, 0)
 material = SubResource("StandardMaterial3D_w3yxv")
 size = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="Animation" id="Animation_mhv1e"]
-resource_name = "SpeedLine"
+[sub_resource type="Animation" id="Animation_pjeli"]
+resource_name = "Decay_SpeedLine"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -208,10 +209,10 @@ tracks/0/path = NodePath("TextureRect/ColorRect:material:shader_parameter/line_c
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0, 0.8, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.0705882), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0627451), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -220,10 +221,10 @@ tracks/1/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_s
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.33, 0.15]
+"values": [0.15, 0.4]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -232,10 +233,10 @@ tracks/2/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_e
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.786, 0.688]
+"values": [0.688, 0.786]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -244,10 +245,10 @@ tracks/3/path = NodePath("TextureRect/ColorRect:material:shader_parameter/animat
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [18.0, 20.0]
+"values": [20.0, 18.0]
 }
 
 [sub_resource type="Animation" id="Animation_gxou6"]
@@ -301,9 +302,8 @@ tracks/3/keys = {
 "values": [20.0]
 }
 
-[sub_resource type="Animation" id="Animation_pjeli"]
-resource_name = "Decay_SpeedLine"
-length = 1.5
+[sub_resource type="Animation" id="Animation_mhv1e"]
+resource_name = "SpeedLine"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -311,10 +311,10 @@ tracks/0/path = NodePath("TextureRect/ColorRect:material:shader_parameter/line_c
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.5),
+"times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0627451), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.0705882), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -323,10 +323,10 @@ tracks/1/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_s
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.15, 0.4]
+"values": [0.33, 0.15]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -335,10 +335,10 @@ tracks/2/path = NodePath("TextureRect/ColorRect:material:shader_parameter/mask_e
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.688, 0.786]
+"values": [0.786, 0.688]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -347,10 +347,10 @@ tracks/3/path = NodePath("TextureRect/ColorRect:material:shader_parameter/animat
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.2),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [20.0, 18.0]
+"values": [18.0, 20.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1pvkq"]

@@ -582,11 +582,37 @@ sky_mode = 1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = SubResource("Environment_582hk")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("6_7qrll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 12.706)
-
 [node name="Car" parent="." instance=ExtResource("18_3vnvr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
+
+[node name="Polices" type="Node3D" parent="."]
+
+[node name="Cop" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 12.706)
+
+[node name="Cop2" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11093, 0.368642, 12.706)
+
+[node name="Cop3" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 13.9329)
+
+[node name="Cop4" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90895, 0.368642, 14.1259)
+
+[node name="Cop5" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 15.1788)
+
+[node name="Cop6" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96845, 0.368642, 15.1788)
+
+[node name="Cop7" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93478, 0.368642, 12.706)
+
+[node name="Cop8" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93478, 0.368642, 14.0016)
+
+[node name="Cop9" parent="Polices" instance=ExtResource("6_7qrll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.81304, 0.368642, 15.1306)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_heb2f")

@@ -4,7 +4,7 @@ const speed = 5.0
 const accel = 10.0
 
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
-@onready var Target = $"../Car"
+@onready var Target = $"../../Car"
 
 
 
