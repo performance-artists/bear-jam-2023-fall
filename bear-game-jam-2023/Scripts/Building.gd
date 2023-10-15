@@ -21,7 +21,7 @@ func _ready():
 func collapse():
 	var size = get_building_size()
 	building_obj.queue_free()
-	crash_sfx_player.instantiate()
+	#crash_sfx_player.instantiate()
 	spawn_cube(size, building_obj.position)
 
 func get_building_size():
@@ -43,7 +43,7 @@ func spawn_cube(dimension, obj_position):
 				
 				add_child(cube_instance)
 func _on_area_3d_body_entered(body):
-	if body.name == "Car" and not destroyed:
+	if body.name == "Car" and not destroyed and body.get_skill_status():
 		destroyed = true
 		$CollisionShape3D.queue_free()
 		collapse()

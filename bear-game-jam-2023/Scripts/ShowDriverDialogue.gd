@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var word = $Word
-@onready var audio_stream_player = $"../../AudioStreamPlayer"
+@onready var audio_stream_player = $"../AudioStreamPlayer"
 
 var cooldown = 0
 

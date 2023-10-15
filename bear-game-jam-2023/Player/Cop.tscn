@@ -4,12 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ca5va0recmdf6" path="res://Assets/CarsAndCity/car_police-96ed262f4195edab0b553c745cbbff87_citybits_texture.png" id="2_j31e1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4qr3e"]
-size = Vector3(0.3, 0.2, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vn3a6"]
 resource_name = "citybits_texture"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_j31e1")
 metallic = 0.4
 roughness = 0.229416
@@ -220,7 +218,7 @@ size = Vector3(0.1, 0.1, 0.1)
 script = ExtResource("1_18ng4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.06, 2.08165e-12)
+transform = Transform3D(0.417588, 0, 0, 0, 0.366491, 0, 0, 0, 1, 0, 0.123195, 0)
 shape = SubResource("BoxShape3D_4qr3e")
 
 [node name="car_police" type="Node3D" parent="."]

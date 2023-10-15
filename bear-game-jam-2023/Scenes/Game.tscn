@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=33 format=3 uid="uid://c0sq34vnj0wvy"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
@@ -11,11 +11,14 @@
 [ext_resource type="AudioStream" uid="uid://hu2st151l1re" path="res://Audio/Taxi Theme.wav" id="12_od870"]
 [ext_resource type="PackedScene" uid="uid://bvpgtjus5428r" path="res://Assets/CarsAndCity/road_junction.fbx" id="13_wdu86"]
 [ext_resource type="PackedScene" uid="uid://cypk2apsb7ias" path="res://Assets/CarsAndCity/road_corner_curved.fbx" id="15_537qs"]
+[ext_resource type="Script" path="res://Scripts/ShowPassengerDialogue.gd" id="15_dsmfa"]
+[ext_resource type="Texture2D" uid="uid://cool6c5mbq1c4" path="res://Assets/Passenger.jpg" id="16_7j04j"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="16_wpnrn"]
 [ext_resource type="PackedScene" uid="uid://r2l4pbfr58m1" path="res://Assets/CarsAndCity/road_tsplit.fbx" id="17_bbnfp"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="17_i4mqy"]
 [ext_resource type="Script" path="res://Scripts/ShowHealth.gd" id="17_i4yfj"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="20_gioyu"]
+[ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="20_k3icx"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="21_3twpm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls7wn"]
@@ -29,12 +32,12 @@ background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_j6rru")
 ambient_light_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lbkl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oafiw"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhcoa"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iiw07"]
 texture = ExtResource("21_3twpm")
 
-[sub_resource type="FontFile" id="FontFile_2ahif"]
+[sub_resource type="FontFile" id="FontFile_yfu20"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -539,23 +542,26 @@ cache/0/19/0/kerning_overrides/17/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id="Theme_dsqov"]
-default_font = SubResource("FontFile_2ahif")
+[sub_resource type="Theme" id="Theme_03okj"]
+default_font = SubResource("FontFile_yfu20")
 default_font_size = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iu6v"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2qq8"]
+texture = ExtResource("16_7j04j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ngju"]
 bg_color = Color(0.862745, 0, 0.219608, 0.309804)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4htpy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2uv3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq7ux"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w04o"]
 bg_color = Color(0, 0, 0, 1)
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwha2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrd3h"]
 bg_color = Color(0, 0.937255, 0, 1)
 
 [node name="World" type="Node3D"]
@@ -2858,34 +2864,36 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 25.0
 offset_top = -109.0
-offset_right = 251.0
+offset_right = 252.0
 offset_bottom = -4.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_2lbkl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oafiw")
 text = "0"
 vertical_alignment = 1
 script = ExtResource("4_w71t3")
 
 [node name="Timer" type="Label" parent="UI"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -133.0
-offset_right = 133.0
-offset_bottom = 150.0
-grow_horizontal = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -267.0
+offset_top = 9.0
+offset_right = -25.0
+offset_bottom = 114.0
+grow_horizontal = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_2lbkl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oafiw")
 text = "0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("4_gtrqw")
 
 [node name="DriverDialogue" type="Panel" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -2910,7 +2918,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bhcoa")
+theme_override_styles/panel = SubResource("StyleBoxTexture_iiw07")
 
 [node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
@@ -2925,7 +2933,54 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_dsqov")
+theme = SubResource("Theme_03okj")
+theme_override_fonts/font = ExtResource("17_i4mqy")
+text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
+autowrap_mode = 2
+uppercase = true
+
+[node name="PassengerDialogue" type="Panel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -245.5
+offset_top = -144.0
+offset_right = 245.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("15_dsmfa")
+
+[node name="Avatar" type="Panel" parent="UI/PassengerDialogue"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -62.5
+offset_right = 125.0
+offset_bottom = 62.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b2qq8")
+
+[node name="Word" type="Label" parent="UI/PassengerDialogue"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -56.0
+offset_right = -13.0
+offset_bottom = 56.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_03okj")
 theme_override_fonts/font = ExtResource("17_i4mqy")
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
@@ -2939,7 +2994,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5iu6v")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ngju")
 script = ExtResource("8_ng758")
 
 [node name="Title" type="Label" parent="UI/Lose"]
@@ -2957,7 +3012,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4htpy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m2uv3")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2977,7 +3032,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4htpy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m2uv3")
 text = "POINTS =  0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -3006,11 +3061,15 @@ offset_left = 18.0
 offset_top = 24.0
 offset_right = 338.0
 offset_bottom = 66.0
-theme_override_styles/background = SubResource("StyleBoxFlat_lq7ux")
-theme_override_styles/fill = SubResource("StyleBoxFlat_dwha2")
+theme_override_styles/background = SubResource("StyleBoxFlat_2w04o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vrd3h")
 value = 50.0
 rounded = true
 show_percentage = false
 script = ExtResource("17_i4yfj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource("20_k3icx")
+volume_db = -5.0
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]
