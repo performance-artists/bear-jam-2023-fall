@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crtn7vqh8djbe"]
+[gd_scene load_steps=5 format=3 uid="uid://crtn7vqh8djbe"]
 
 [ext_resource type="PackedScene" uid="uid://bj8f1nhx70gco" path="res://Assets/health/source/HealthBox.fbx" id="1_2h2n1"]
 [ext_resource type="Script" path="res://Scripts/health_box.gd" id="2_wxf1w"]
+[ext_resource type="AudioStream" uid="uid://cbfnocufjupha" path="res://Audio/Task Completed.mp3" id="3_mvf4q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wngfa"]
 size = Vector3(0.5, 0.5, 0.5)
@@ -11,5 +12,9 @@ script = ExtResource("2_wxf1w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_wngfa")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_mvf4q")
+volume_db = 7.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
