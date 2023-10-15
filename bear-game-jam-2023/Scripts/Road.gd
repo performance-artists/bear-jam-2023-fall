@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var map_width = 100
-@export var map_height = 100
+@export var map_width = 150
+@export var map_height = 150
 var road_counter = 0
 
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
@@ -10,8 +10,6 @@ var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
 
 var node_building = preload("res://Player/Building.tscn")
 var npc_node = preload("res://Player/car_generator.tscn")
-
-var healthbox = preload("res://Player/health_box.tscn")
 
 func bfs(width: int, height: int, r):
 	var q = []
@@ -30,7 +28,7 @@ func bfs(width: int, height: int, r):
 		var dir = randi() % 4 + 1
 		for i in range(dir):
 			var move_dir = randi() % 4
-			var len = 20 + randi() % 50
+			var len = 20 + randi() % 60
 			road_counter += 1
 			if move_dir == 0:
 				for j in range(len):
@@ -72,7 +70,7 @@ func _ready():
 			if r[i][j] == 0:
 				var base = fbx_base.instantiate()
 				base.position = Vector3(i * size, 0, j * size) - offset
-				var chance = randi_range(0,5)
+				var chance = randi_range(0,4)
 				if chance == 0:
 					var building = node_building.instantiate()
 					building.position = Vector3(i * size, 0, j * size) - offset
@@ -85,11 +83,6 @@ func _ready():
 				var road
 				if count > 3:
 					road = fbx_road_junction.instantiate()
-					var spawn_change = int(randi_range(0,10))
-					if spawn_change == 7:
-						var healthboxspawn = healthbox.instantiate()
-						healthboxspawn.position = Vector3(i * size, 1, j * size) - offset
-						add_child(healthboxspawn)
 				elif count == 3 and r[i][j-1] == 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
@@ -108,3 +101,8 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
+				var chance = randi_range(0,6)
+				if chance == 0:
+					var npc_temp = npc_node.instantiate()
+					npc_temp.position = Vector3(i * size, 0, j * size) - offset
+					add_child(npc_temp)
