@@ -213,12 +213,12 @@ gravity = Vector3(0, 0.3, 0)
 material = SubResource("StandardMaterial3D_w3yxv")
 size = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="Sky" id="Sky_rk51t"]
+[sub_resource type="Sky" id="Sky_t3ene"]
 
 [sub_resource type="Environment" id="Environment_bua20"]
 background_mode = 1
 background_color = Color(1, 1, 1, 1)
-sky = SubResource("Sky_rk51t")
+sky = SubResource("Sky_t3ene")
 ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Menu" type="Node3D"]

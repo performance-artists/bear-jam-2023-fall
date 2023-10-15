@@ -10,16 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Bear Jam 2023"
+config/name="Criminal Service"
 run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
 GlobalXP="*res://Scripts/XP.gd"
 GlobalTimer="*res://Scripts/Timer.gd"
 GlobalHealth="*res://Scripts/Health.gd"
+GlobalPassenger="*res://Scripts/Passenger.gd"
 
 [dotnet]
 
