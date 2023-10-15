@@ -1,4 +1,4 @@
-extends Area3D
+extends StaticBody3D
 
 @onready var audio_stream_player = $AudioStreamPlayer
 
