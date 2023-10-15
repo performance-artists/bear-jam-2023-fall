@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Area3D
 
 @onready var audio_stream_player = $AudioStreamPlayer
 
@@ -17,7 +17,7 @@ func _ready():
 	building_fbx = load(building_path)
 	building_obj = building_fbx.instantiate()
 	add_child(building_obj)
-'
+
 func collapse():
 	var size = get_building_size()
 	building_obj.queue_free()
@@ -34,14 +34,14 @@ func get_building_size():
 func spawn_cube(dimension, obj_position):
 	const CUBE_SIZE = Vector3(0.2, 0.2, 0.2)
 	for x in range(0,dimension.x * 4):
-		for y in range(dimension.y, dimension.y * 4):
+		for y in range(dimension.y, dimension.y * 6):
 			for z in range(0,dimension.z * 2):
 				var cube_instance = cube.instantiate()
 				cube_instance.position = Vector3(x, y, z) * CUBE_SIZE
 				cube_instance.position.x -= 1
 				add_child(cube_instance)
 
-func _on_area_3d_body_entered(body):
+func _on_body_entered(body):
 	if body.name == "Car" and not destroyed:
 		destroyed = true
 		$CollisionShape3D.queue_free()
@@ -50,4 +50,3 @@ func _on_area_3d_body_entered(body):
 		GlobalXP.value += 5
 		GlobalHealth.value -= 2
 		GlobalNitro.value += 10
-'

@@ -1,29 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk7qyiugmiod4"]
+[gd_scene load_steps=4 format=3 uid="uid://dk7qyiugmiod4"]
 
 [ext_resource type="Script" path="res://Scripts/Building.gd" id="1_i4n3t"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_idja4"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_bk73y"]
-size = Vector3(2, 1, 2)
+[ext_resource type="AudioStream" uid="uid://b6qqgdatj7tpx" path="res://Audio/Car Crash 1.ogg" id="2_8dkon"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ndx8"]
 size = Vector3(1.6, 1, 1.6)
 
-[node name="Building" type="StaticBody3D"]
-physics_material_override = SubResource("PhysicsMaterial_idja4")
+[node name="Building" type="Area3D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_i4n3t")
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53271, 0)
-shape = SubResource("BoxShape3D_bk73y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.356754, 0)
 shape = SubResource("BoxShape3D_7ndx8")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_8dkon")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

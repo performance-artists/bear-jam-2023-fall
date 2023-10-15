@@ -136,6 +136,7 @@ func _on_body_entered(body):
 	if (body.name.substr(0,3) == "Cop" or body.name.substr(1,3) == "Cha") and (abs(linear_velocity.x) + abs(linear_velocity.z) > 3):
 		if not body.crashed:
 			body.crashed = true
+			
 			GlobalXP.value += 3
 			GlobalNitro.value += 10
 			PoliceManager.current_police_total -= 1
