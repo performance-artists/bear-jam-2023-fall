@@ -22,7 +22,7 @@ func _physics_process(delta):
 		direction = next_position - global_position
 		
 		direction = direction.normalized()
-		if next_position.distance_to(global_position) > 0.01:
+		if next_position.distance_to(global_position) > 1:
 			look_at(next_position,Vector3.UP)
 			
 		velocity = velocity.lerp(direction * speed , accel * delta)
