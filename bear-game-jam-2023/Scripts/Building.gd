@@ -1,5 +1,7 @@
 extends StaticBody3D
 
+@onready var audio_stream_player = $AudioStreamPlayer
+
 const arr = ['A', 'B', 'C', 'D', 'E', 'F', 'H']
 var path = "res://Assets/CarsAndCity/building_%s.fbx"
 var cube = preload("res://Player/cube.tscn")
@@ -45,5 +47,6 @@ func _on_area_3d_body_entered(body):
 		destroyed = true
 		$CollisionShape3D.queue_free()
 		collapse()
+		audio_stream_player.play()
 		GlobalXP.value += 5
 		GlobalHealth.value -= 10

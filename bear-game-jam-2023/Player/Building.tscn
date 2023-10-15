@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk7qyiugmiod4"]
+[gd_scene load_steps=5 format=3 uid="uid://dk7qyiugmiod4"]
 
 [ext_resource type="Script" path="res://Scripts/Building.gd" id="1_i4n3t"]
+[ext_resource type="AudioStream" uid="uid://ca1irf8qxe3ti" path="res://Audio/Explosion.mp3" id="2_u50db"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_van7t"]
 size = Vector3(0.9, 1, 0.9)
@@ -19,5 +20,9 @@ shape = SubResource("BoxShape3D_van7t")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53271, 0)
 shape = SubResource("BoxShape3D_bk73y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_u50db")
+volume_db = -5.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
