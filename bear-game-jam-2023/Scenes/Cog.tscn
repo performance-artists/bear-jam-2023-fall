@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="10_pfx0i"]
 [ext_resource type="PackedScene" uid="uid://dk7qyiugmiod4" path="res://Player/Building.tscn" id="12_ofdnc"]
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="13_4yl3e"]
-[ext_resource type="PackedScene" path="res://Models/road_junction_new.fbx" id="14_p7nft"]
+[ext_resource type="PackedScene" uid="uid://fv3o4xlmk4ot" path="res://Models/road_junction_new.fbx" id="14_p7nft"]
 [ext_resource type="PackedScene" uid="uid://bck4agq3x3fde" path="res://Assets/CarsAndCity/building_D.fbx" id="14_y0npv"]
 [ext_resource type="Script" path="res://Scripts/ShowHealth.gd" id="15_xhn34"]
 

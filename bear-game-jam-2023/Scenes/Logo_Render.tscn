@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dewkwl1i8w0ik"]
+[gd_scene load_steps=38 format=3 uid="uid://cwnhuuy2xsbje"]
 
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="1_itrlw"]
 [ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="2_6fk4r"]

@@ -9,7 +9,9 @@ var fbx_road = preload("res://Assets/CarsAndCity/road_straight.fbx")
 var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
 
 var node_building = preload("res://Player/Building.tscn")
+var npc_node = preload("res://Player/car_generator.tscn")
 
+var healthbox = preload("res://Player/health_box.tscn")
 
 func bfs(width: int, height: int, r):
 	var q = []
@@ -20,14 +22,15 @@ func bfs(width: int, height: int, r):
 		q.pop_front()
 		var x = top.x
 		var y = top.y
-		if road_counter > 1200:
+		if road_counter > 800:
+			q.clear()
 			return
 		if x < 0 or x >= width or y < 0 or y >= height:
 			continue
 		var dir = randi() % 4 + 1
 		for i in range(dir):
 			var move_dir = randi() % 4
-			var len = 20 + randi() % 30
+			var len = 20 + randi() % 50
 			road_counter += 1
 			if move_dir == 0:
 				for j in range(len):
@@ -82,6 +85,11 @@ func _ready():
 				var road
 				if count > 3:
 					road = fbx_road_junction.instantiate()
+					var spawn_change = int(randi_range(0,10))
+					if spawn_change == 7:
+						var healthboxspawn = healthbox.instantiate()
+						healthboxspawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthboxspawn)
 				elif count == 3 and r[i][j-1] == 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
@@ -100,4 +108,3 @@ func _ready():
 				road.position = Vector3(i * size, 0, j * size) - offset
 				road.scale = Vector3(2,2,2)
 				add_child(road)
-	print("done")
