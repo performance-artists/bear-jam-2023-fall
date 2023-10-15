@@ -1,6 +1,6 @@
 extends Node3D
 
-const gen_time = 20
+const gen_time = 10
 var temp_time = 0
 
 var npc_node = preload("res://Player/npc.tscn")
