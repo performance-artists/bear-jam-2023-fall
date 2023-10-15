@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=40 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bymfhnfsqidp2" path="res://Player/Player.tscn" id="18_3vnvr"]
 [ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="18_dre28"]
 [ext_resource type="PackedScene" uid="uid://cd5y7ogcpod60" path="res://Player/destination.tscn" id="20_klfng"]
-[ext_resource type="PackedScene" uid="uid://boab4a4tr8bdx" path="res://Scenes/health_box.tscn" id="22_sbjhc"]
+[ext_resource type="PackedScene" path="res://Scenes/health_box.tscn" id="22_sbjhc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y342e"]
 albedo_texture = ExtResource("1_r5w6a")
