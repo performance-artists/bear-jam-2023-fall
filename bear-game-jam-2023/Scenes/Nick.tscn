@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://5baol7qj55js"]
+[gd_scene load_steps=40 format=3 uid="uid://5baol7qj55js"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_r5w6a"]
 [ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="2_io517"]
