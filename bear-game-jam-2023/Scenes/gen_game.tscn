@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bjhkrk4lorxlu"]
+[gd_scene load_steps=55 format=3 uid="uid://bjhkrk4lorxlu"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_18eif"]
 [ext_resource type="Script" path="res://Scripts/NavMeshBaker.gd" id="2_1uibd"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://nemokjgoku7s" path="res://Audio/Taxi Game Over.wav" id="12_wu82r"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="13_d0p48"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="14_tx6ib"]
+[ext_resource type="Script" path="res://Scripts/ShowXP.gd" id="15_ef2e2"]
 [ext_resource type="Script" path="res://Scripts/Lose.gd" id="15_y2i04"]
 [ext_resource type="AudioStream" uid="uid://b1mmth1f6lm1r" path="res://Audio/Dialogue.mp3" id="16_nnjv4"]
 [ext_resource type="Script" path="res://ToMenu.gd" id="16_wh236"]
@@ -822,6 +823,7 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qo452")
 text = "0"
 vertical_alignment = 1
+script = ExtResource("15_ef2e2")
 
 [node name="Timer" type="Label" parent="UI"]
 layout_mode = 1
@@ -1035,6 +1037,23 @@ value = 50.0
 rounded = true
 show_percentage = false
 script = ExtResource("21_nxuia")
+
+[node name="Text" type="Label" parent="UI/Nitro"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = 50.0
+offset_right = 110.0
+offset_bottom = 94.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("10_nj8ia")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ji2ju")
+text = "NITRO COST = 50"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("16_nnjv4")

@@ -7,7 +7,7 @@ var road_counter = 0
 var fbx_base = preload("res://Assets/CarsAndCity/base.fbx")
 var fbx_road = preload("res://Assets/CarsAndCity/road_straight.fbx")
 var fbx_road_junction = preload("res://Assets/CarsAndCity/road_junction.fbx")
-
+var healthbox = preload("res://Player/health_box.tscn")
 var node_building = preload("res://Player/Building.tscn")
 var npc_node = preload("res://Player/npc.tscn")
 
@@ -83,19 +83,49 @@ func _ready():
 				var road
 				if count > 3:
 					road = fbx_road_junction.instantiate()
+					var chance = int(randi() % 10)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				elif count == 3 and r[i][j-1] == 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
+					var chance = int(randi() % 100)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				elif count == 3 and r[i][j+1] == 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
+					var chance = int(randi() % 100)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				elif count == 3 and r[i-1][j] == 0:
 					road = fbx_road.instantiate()
+					var chance = int(randi() % 100)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				elif count == 3 and r[i+1][j] == 0:
 					road = fbx_road.instantiate()
+					var chance = int(randi() % 100)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				elif r[i-1][j] + r[i+1][j] > 0:
 					road = fbx_road.instantiate()
 					road.rotation.y = PI / 2
+					var chance = int(randi() % 100)
+					if chance == 7:
+						var healthbox_spawn = healthbox.instantiate()
+						healthbox_spawn.position = Vector3(i * size, 1, j * size) - offset
+						add_child(healthbox_spawn)
 				else:
 					road = fbx_road.instantiate()
 				road.position = Vector3(i * size, 0, j * size) - offset
