@@ -415,6 +415,8 @@ shader_parameter/animation_speed = 20.0
 shader_parameter/noise = SubResource("NoiseTexture2D_go5ya")
 
 [node name="Car" type="RigidBody3D"]
+collision_layer = 9
+collision_mask = 9
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
