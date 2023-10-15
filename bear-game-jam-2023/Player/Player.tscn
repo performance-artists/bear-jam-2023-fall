@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bymfhnfsqidp2"]
+[gd_scene load_steps=44 format=3 uid="uid://bymfhnfsqidp2"]
 
 [ext_resource type="Texture2D" uid="uid://bdod85trdi4dh" path="res://Assets/CarsAndCity/car_taxi-a272312b752ac65517c022a63d520e5a_citybits_texture.png" id="1_3qi1u"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4iveb"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://khsscmotanoc" path="res://Audio/Car Brake 3.ogg" id="4_b1212"]
 [ext_resource type="Shader" path="res://Player/vfx_SpeedLine.gdshader" id="6_utmt7"]
 [ext_resource type="Script" path="res://Player/vfx_camera.gd" id="6_w2o1n"]
+[ext_resource type="Texture2D" uid="uid://tq872fd6x6ni" path="res://Textures/SmokeParticle.png" id="9_qottb"]
 [ext_resource type="AudioStream" uid="uid://ddu8ct6d0f12" path="res://Audio/Car Running.ogg" id="9_y6c3i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y3htr"]
@@ -377,6 +378,46 @@ shader_parameter/mask_edge = 0.786
 shader_parameter/animation_speed = 20.0
 shader_parameter/noise = SubResource("NoiseTexture2D_go5ya")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ec5nw"]
+transparency = 1
+albedo_color = Color(0.333333, 0.333333, 0.333333, 1)
+albedo_texture = ExtResource("9_qottb")
+
+[sub_resource type="Gradient" id="Gradient_34qdf"]
+colors = PackedColorArray(1, 1, 1, 0.25098, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_stkol"]
+gradient = SubResource("Gradient_34qdf")
+use_hdr = true
+
+[sub_resource type="Gradient" id="Gradient_qjecf"]
+colors = PackedColorArray(1, 1, 1, 0.25098, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dapt1"]
+gradient = SubResource("Gradient_qjecf")
+use_hdr = true
+
+[sub_resource type="Curve" id="Curve_5dumn"]
+_data = [Vector2(0, 0.03125), 0.0, 0.0, 0, 0, Vector2(0.993274, 0.21875), 0.251882, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_oalhu"]
+curve = SubResource("Curve_5dumn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h2eoq"]
+emission_shape = 1
+emission_sphere_radius = 0.05
+direction = Vector3(0, 1, 0)
+spread = 5.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.6
+initial_velocity_max = 1.2
+scale_curve = SubResource("CurveTexture_oalhu")
+color_ramp = SubResource("GradientTexture1D_dapt1")
+color_initial_ramp = SubResource("GradientTexture1D_stkol")
+
+[sub_resource type="QuadMesh" id="QuadMesh_eh8k7"]
+
 [node name="Car" type="RigidBody3D"]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
@@ -481,3 +522,13 @@ autoplay = true
 [node name="BrakeSfxPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_xo5ny")
 volume_db = -10.0
+
+[node name="Smoke" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0144593, -0.246865)
+material_override = SubResource("StandardMaterial3D_ec5nw")
+amount = 1000
+lifetime = 0.5
+randomness = 1.0
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_h2eoq")
+draw_pass_1 = SubResource("QuadMesh_eh8k7")

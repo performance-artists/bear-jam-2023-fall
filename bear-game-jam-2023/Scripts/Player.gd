@@ -8,6 +8,7 @@ extends RigidBody3D
 @onready var particle = $CarMesh/RootNode/car_taxi/Particle
 @onready var brake_sfx_player = $BrakeSfxPlayer
 @onready var running_sfx_player = $RunningSfxPlayer
+@onready var smoke = $Smoke
 
 # Where to place the car mesh relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -33,6 +34,7 @@ var prev_linear_velocity = [0, 0, 0]
 @export var brake_sfx_3: AudioStream
 
 func _ready():
+	smoke.emitting = false
 	starting_running_sfx_volume = running_sfx_player.volume_db
 	randomize()
 
@@ -53,6 +55,10 @@ func _physics_process(delta):
 func _process(delta):
 	brake_sfx_timer -= delta
 	acceleration -= 1
+	
+	if GlobalHealth.value <= 40:
+		smoke.emitting = true
+	
 	if acceleration < 15:
 		acceleration = 15
 		using_skill = false
