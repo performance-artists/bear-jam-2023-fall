@@ -606,7 +606,7 @@ volume_db = -10.0
 stream = ExtResource("9_85k0n")
 
 [node name="Smoke" parent="." instance=ExtResource("10_n7aag")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.874188, 0.0401979)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0597944, -0.210353)
 process_material = SubResource("ParticleProcessMaterial_sfkbb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
