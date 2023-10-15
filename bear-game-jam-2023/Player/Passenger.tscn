@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy34vbah43yrr"]
+
+[ext_resource type="PackedScene" uid="uid://dftuaugl4pmeg" path="res://Assets/low poly guy.glb" id="1_y6jtf"]
+[ext_resource type="Script" path="res://Scripts/PickupPassenger.gd" id="2_h85pk"]
+[ext_resource type="PackedScene" uid="uid://dt7nn567plhht" path="res://Assets/money_bag.glb" id="3_74xkl"]
+[ext_resource type="PackedScene" uid="uid://cytk1igxlwoh0" path="res://Assets/gun_low-poly.glb" id="4_oio35"]
+[ext_resource type="PackedScene" uid="uid://dxjq4jum31mar" path="res://Assets/simple_red_arrow.glb" id="5_ia5me"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_62vk4"]
+
+[node name="Passenger" type="Node3D"]
+
+[node name="low poly guy" parent="." instance=ExtResource("1_y6jtf")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("2_h85pk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.04, 0, 0, 0.52345)
+shape = SubResource("BoxShape3D_62vk4")
+
+[node name="money_bag" parent="." instance=ExtResource("3_74xkl")]
+transform = Transform3D(0.1, 0, 0, 0, 0.145019, 0, 0, 0, 0.1, 0.190038, 0.120504, 0.088021)
+
+[node name="gun_low-poly" parent="." instance=ExtResource("4_oio35")]
+transform = Transform3D(0.005, 0, 0, 0, -2.18557e-10, -0.005, 0, 0.005, -2.18557e-10, -0.077336, 0.20107, -0.00161995)
+
+[node name="simple_red_arrow" parent="." instance=ExtResource("5_ia5me")]
+transform = Transform3D(0.212132, 0, -0.296985, 0, 0.4, 0, 0.212132, 0, 0.296985, 0, 1.6, 0)
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
