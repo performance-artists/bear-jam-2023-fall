@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://pq05jlm02mxo"]
+[gd_scene load_steps=27 format=3 uid="uid://defjvrch3ym5g"]
 
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="1_iawm3"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="2_kywbo"]
