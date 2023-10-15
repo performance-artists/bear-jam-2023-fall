@@ -52,14 +52,10 @@ func _process(delta):
 		using_skill = false
 	#if not ground_ray.is_colliding():
 	#	return
-	if GlobalHealth.value > 0:
-		speed_input = Input.get_axis("ui_down", "ui_up") * acceleration
-		turn_input = Input.get_axis("ui_right", "ui_left") * deg_to_rad(steering)
-		right_wheel.rotation.y = turn_input
-		left_wheel.rotation.y = turn_input
-	else:
-		right_wheel.rotation.y = 0
-		left_wheel.rotation.y = 0
+	speed_input = acceleration
+	turn_input = deg_to_rad(steering)
+	right_wheel.rotation.y = turn_input
+	left_wheel.rotation.y = turn_input
 	
 	if turn_input and abs(linear_velocity.x) > 0.2 and abs(linear_velocity.z) > 0.2:
 		particle.emitting = true

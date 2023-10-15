@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalXP="*res://Scripts/XP.gd"
 GlobalTimer="*res://Scripts/Timer.gd"
+GlobalHealth="*res://Scripts/Health.gd"
 
 [dotnet]
 

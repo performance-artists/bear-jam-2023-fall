@@ -3,6 +3,7 @@ extends Panel
 @onready var points = $Points
 @onready var xp = $"../XP"
 @onready var timer = $"../Timer"
+@onready var health = $"../Health"
 
 var show_it = true
 
@@ -14,10 +15,13 @@ func _process(delta):
 			show_it = false
 		xp.hide()
 		timer.hide()
+		health.hide()
 		self.show()
+		GlobalHealth.value = 0
 		GlobalXP.value = 0
 	else:
 		show_it = true
 		self.hide()
 		xp.show()
 		timer.show()
+		health.show()

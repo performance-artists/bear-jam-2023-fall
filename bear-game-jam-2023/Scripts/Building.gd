@@ -45,3 +45,5 @@ func _on_area_3d_body_entered(body):
 		destroyed = true
 		$CollisionShape3D.queue_free()
 		collapse()
+		GlobalXP.value += 5
+		GlobalHealth.value -= 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0sq34vnj0wvy"]
+[gd_scene load_steps=29 format=3 uid="uid://c0sq34vnj0wvy"]
 
 [ext_resource type="Script" path="res://Scripts/XP.gd" id="1_wvy54"]
 [ext_resource type="Texture2D" uid="uid://bnnttkj6th8nt" path="res://Assets/RPG_assets-main/textures/Dark/texture_08.png" id="2_nyp06"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://druiq5tdj85wf" path="res://Assets/CarsAndCity/road_straight.fbx" id="16_wpnrn"]
 [ext_resource type="PackedScene" uid="uid://r2l4pbfr58m1" path="res://Assets/CarsAndCity/road_tsplit.fbx" id="17_bbnfp"]
 [ext_resource type="FontFile" uid="uid://cy7y7d7e5mmpa" path="res://Assets/ARCADECLASSIC.TTF" id="17_i4mqy"]
+[ext_resource type="Script" path="res://Scripts/ShowHealth.gd" id="17_i4yfj"]
 [ext_resource type="Script" path="res://Scripts/ShowDriverDialogue.gd" id="20_gioyu"]
 [ext_resource type="Texture2D" uid="uid://bdxx1k87deeur" path="res://Assets/Driver.jpg" id="21_3twpm"]
 
@@ -28,12 +29,12 @@ background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_j6rru")
 ambient_light_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acgaq"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lbkl"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cpai"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhcoa"]
 texture = ExtResource("21_3twpm")
 
-[sub_resource type="FontFile" id="FontFile_8m7jy"]
+[sub_resource type="FontFile" id="FontFile_2ahif"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -538,14 +539,24 @@ cache/0/19/0/kerning_overrides/17/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id="Theme_7nyr1"]
-default_font = SubResource("FontFile_8m7jy")
+[sub_resource type="Theme" id="Theme_dsqov"]
+default_font = SubResource("FontFile_2ahif")
 default_font_size = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj6qx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iu6v"]
 bg_color = Color(0.862745, 0, 0.219608, 0.309804)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixymg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4htpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq7ux"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwha2"]
+bg_color = Color(0, 0.937255, 0, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_wvy54")
@@ -2822,6 +2833,16 @@ sky_mode = 1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = SubResource("Environment_c4pd6")
 
+[node name="CharacterBody3D" parent="." instance=ExtResource("10_mr3rb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 12.706)
+
+[node name="Car" parent="." instance=ExtResource("11_egpig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_od870")
+autoplay = true
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -2836,13 +2857,13 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 25.0
-offset_top = -154.0
+offset_top = -109.0
 offset_right = 251.0
 offset_bottom = -4.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_acgaq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lbkl")
 text = "0"
 vertical_alignment = 1
 script = ExtResource("4_w71t3")
@@ -2858,7 +2879,7 @@ offset_bottom = 150.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_acgaq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lbkl")
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2889,7 +2910,7 @@ offset_top = -62.5
 offset_right = 125.0
 offset_bottom = 62.5
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_3cpai")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bhcoa")
 
 [node name="Word" type="Label" parent="UI/DriverDialogue"]
 layout_mode = 1
@@ -2904,7 +2925,7 @@ offset_right = -13.0
 offset_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_7nyr1")
+theme = SubResource("Theme_dsqov")
 theme_override_fonts/font = ExtResource("17_i4mqy")
 text = "Time to make money. I'm gonna ignore my company, I'll do it by my own."
 autowrap_mode = 2
@@ -2918,7 +2939,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uj6qx")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5iu6v")
 script = ExtResource("8_ng758")
 
 [node name="Title" type="Label" parent="UI/Lose"]
@@ -2936,7 +2957,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ixymg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4htpy")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2956,7 +2977,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("17_i4mqy")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ixymg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4htpy")
 text = "POINTS =  0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2979,14 +3000,17 @@ theme_override_font_sizes/font_size = 100
 text = "OK"
 script = ExtResource("9_fr1fc")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("10_mr3rb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93572, 0.368642, 12.706)
-
-[node name="Car" parent="." instance=ExtResource("11_egpig")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_od870")
-autoplay = true
+[node name="Health" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 338.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lq7ux")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dwha2")
+value = 50.0
+rounded = true
+show_percentage = false
+script = ExtResource("17_i4yfj")
 
 [connection signal="pressed" from="UI/Lose/Button" to="UI/Lose/Button" method="_on_pressed"]
