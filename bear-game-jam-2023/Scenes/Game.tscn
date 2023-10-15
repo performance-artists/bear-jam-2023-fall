@@ -1831,6 +1831,510 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 201, 0, 327)
 [node name="road_straight422" parent="Map/road" instance=ExtResource("16_wpnrn")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 201, 0, 309)
 
+[node name="road_straight359" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -51, 0, 345)
+
+[node name="road_straight554" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -57, 0, 345)
+
+[node name="road_straight555" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -63, 0, 345)
+
+[node name="road_straight556" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -39, 0, 345)
+
+[node name="road_straight557" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -33, 0, 345)
+
+[node name="road_straight558" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -27, 0, 345)
+
+[node name="road_straight559" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -45, 0, 345)
+
+[node name="road_straight560" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -9, 0, 345)
+
+[node name="road_straight561" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -15, 0, 345)
+
+[node name="road_straight562" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -21, 0, 345)
+
+[node name="road_straight563" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 3, 0, 345)
+
+[node name="road_straight564" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 9, 0, 345)
+
+[node name="road_straight565" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 15, 0, 345)
+
+[node name="road_straight566" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -3, 0, 345)
+
+[node name="road_straight567" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 33, 0, 345)
+
+[node name="road_straight568" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 27, 0, 345)
+
+[node name="road_straight569" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 21, 0, 345)
+
+[node name="road_straight570" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 45, 0, 345)
+
+[node name="road_straight571" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 51, 0, 345)
+
+[node name="road_straight572" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 57, 0, 345)
+
+[node name="road_straight573" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 39, 0, 345)
+
+[node name="road_straight574" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 75, 0, 345)
+
+[node name="road_straight575" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 69, 0, 345)
+
+[node name="road_straight576" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 63, 0, 345)
+
+[node name="road_straight577" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 87, 0, 345)
+
+[node name="road_straight578" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 93, 0, 345)
+
+[node name="road_straight579" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 99, 0, 345)
+
+[node name="road_straight580" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 81, 0, 345)
+
+[node name="road_straight581" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 117, 0, 345)
+
+[node name="road_straight582" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 111, 0, 345)
+
+[node name="road_straight583" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 105, 0, 345)
+
+[node name="road_straight584" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 129, 0, 345)
+
+[node name="road_straight585" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 135, 0, 345)
+
+[node name="road_straight586" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 141, 0, 345)
+
+[node name="road_straight587" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 123, 0, 345)
+
+[node name="road_straight588" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 159, 0, 345)
+
+[node name="road_straight589" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 153, 0, 345)
+
+[node name="road_straight590" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 147, 0, 345)
+
+[node name="road_straight591" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 171, 0, 345)
+
+[node name="road_straight592" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 177, 0, 345)
+
+[node name="road_straight593" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 183, 0, 345)
+
+[node name="road_straight594" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 165, 0, 345)
+
+[node name="road_straight595" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -51, 0, 333)
+
+[node name="road_straight596" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -57, 0, 333)
+
+[node name="road_straight597" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -63, 0, 333)
+
+[node name="road_straight598" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -39, 0, 333)
+
+[node name="road_straight599" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -33, 0, 333)
+
+[node name="road_straight600" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -27, 0, 333)
+
+[node name="road_straight601" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -45, 0, 333)
+
+[node name="road_straight602" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -9, 0, 333)
+
+[node name="road_straight603" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -15, 0, 333)
+
+[node name="road_straight604" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -21, 0, 333)
+
+[node name="road_straight605" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 3, 0, 333)
+
+[node name="road_straight606" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 9, 0, 333)
+
+[node name="road_straight607" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 15, 0, 333)
+
+[node name="road_straight608" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -3, 0, 333)
+
+[node name="road_straight609" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 33, 0, 333)
+
+[node name="road_straight610" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 27, 0, 333)
+
+[node name="road_straight611" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 21, 0, 333)
+
+[node name="road_straight612" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 45, 0, 333)
+
+[node name="road_straight613" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 51, 0, 333)
+
+[node name="road_straight614" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 57, 0, 333)
+
+[node name="road_straight615" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 39, 0, 333)
+
+[node name="road_straight616" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 75, 0, 333)
+
+[node name="road_straight617" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 69, 0, 333)
+
+[node name="road_straight618" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 63, 0, 333)
+
+[node name="road_straight619" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 87, 0, 333)
+
+[node name="road_straight620" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 93, 0, 333)
+
+[node name="road_straight621" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 99, 0, 333)
+
+[node name="road_straight622" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 81, 0, 333)
+
+[node name="road_straight623" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 117, 0, 333)
+
+[node name="road_straight624" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 111, 0, 333)
+
+[node name="road_straight625" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 105, 0, 333)
+
+[node name="road_straight626" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 129, 0, 333)
+
+[node name="road_straight627" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 135, 0, 333)
+
+[node name="road_straight628" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 141, 0, 333)
+
+[node name="road_straight629" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 123, 0, 333)
+
+[node name="road_straight630" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 159, 0, 333)
+
+[node name="road_straight631" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 153, 0, 333)
+
+[node name="road_straight632" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 147, 0, 333)
+
+[node name="road_straight633" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 171, 0, 333)
+
+[node name="road_straight634" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 177, 0, 333)
+
+[node name="road_straight635" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 183, 0, 333)
+
+[node name="road_straight636" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 165, 0, 333)
+
+[node name="road_straight637" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -303, 0, 345)
+
+[node name="road_straight638" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -309, 0, 345)
+
+[node name="road_straight639" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -315, 0, 345)
+
+[node name="road_straight640" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -291, 0, 345)
+
+[node name="road_straight641" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -285, 0, 345)
+
+[node name="road_straight642" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -279, 0, 345)
+
+[node name="road_straight643" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -297, 0, 345)
+
+[node name="road_straight644" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -261, 0, 345)
+
+[node name="road_straight645" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -267, 0, 345)
+
+[node name="road_straight646" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -273, 0, 345)
+
+[node name="road_straight647" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -249, 0, 345)
+
+[node name="road_straight648" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -243, 0, 345)
+
+[node name="road_straight649" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -237, 0, 345)
+
+[node name="road_straight650" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -255, 0, 345)
+
+[node name="road_straight651" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -219, 0, 345)
+
+[node name="road_straight652" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -225, 0, 345)
+
+[node name="road_straight653" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -231, 0, 345)
+
+[node name="road_straight654" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -207, 0, 345)
+
+[node name="road_straight655" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -201, 0, 345)
+
+[node name="road_straight656" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -195, 0, 345)
+
+[node name="road_straight657" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -213, 0, 345)
+
+[node name="road_straight658" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -177, 0, 345)
+
+[node name="road_straight659" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -183, 0, 345)
+
+[node name="road_straight660" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -189, 0, 345)
+
+[node name="road_straight661" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -165, 0, 345)
+
+[node name="road_straight662" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -159, 0, 345)
+
+[node name="road_straight663" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -153, 0, 345)
+
+[node name="road_straight664" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -171, 0, 345)
+
+[node name="road_straight665" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -135, 0, 345)
+
+[node name="road_straight666" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -141, 0, 345)
+
+[node name="road_straight667" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -147, 0, 345)
+
+[node name="road_straight668" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -123, 0, 345)
+
+[node name="road_straight669" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -117, 0, 345)
+
+[node name="road_straight670" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -111, 0, 345)
+
+[node name="road_straight671" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -129, 0, 345)
+
+[node name="road_straight672" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -93, 0, 345)
+
+[node name="road_straight673" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -99, 0, 345)
+
+[node name="road_straight674" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -105, 0, 345)
+
+[node name="road_straight675" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -81, 0, 345)
+
+[node name="road_straight676" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -75, 0, 345)
+
+[node name="road_straight677" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -69, 0, 345)
+
+[node name="road_straight678" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -87, 0, 345)
+
+[node name="road_straight679" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -303, 0, 333)
+
+[node name="road_straight680" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -309, 0, 333)
+
+[node name="road_straight681" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -315, 0, 333)
+
+[node name="road_straight682" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -291, 0, 333)
+
+[node name="road_straight683" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -285, 0, 333)
+
+[node name="road_straight684" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -279, 0, 333)
+
+[node name="road_straight685" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -297, 0, 333)
+
+[node name="road_straight686" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -261, 0, 333)
+
+[node name="road_straight687" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -267, 0, 333)
+
+[node name="road_straight688" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -273, 0, 333)
+
+[node name="road_straight689" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -249, 0, 333)
+
+[node name="road_straight690" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -243, 0, 333)
+
+[node name="road_straight691" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -237, 0, 333)
+
+[node name="road_straight692" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -255, 0, 333)
+
+[node name="road_straight693" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -219, 0, 333)
+
+[node name="road_straight694" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -225, 0, 333)
+
+[node name="road_straight695" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -231, 0, 333)
+
+[node name="road_straight696" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -207, 0, 333)
+
+[node name="road_straight697" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -201, 0, 333)
+
+[node name="road_straight698" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -195, 0, 333)
+
+[node name="road_straight699" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -213, 0, 333)
+
+[node name="road_straight700" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -177, 0, 333)
+
+[node name="road_straight701" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -183, 0, 333)
+
+[node name="road_straight702" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -189, 0, 333)
+
+[node name="road_straight703" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -165, 0, 333)
+
+[node name="road_straight704" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -159, 0, 333)
+
+[node name="road_straight705" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -153, 0, 333)
+
+[node name="road_straight706" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -171, 0, 333)
+
+[node name="road_straight707" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -135, 0, 333)
+
+[node name="road_straight708" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -141, 0, 333)
+
+[node name="road_straight709" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -147, 0, 333)
+
+[node name="road_straight710" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -123, 0, 333)
+
+[node name="road_straight711" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -117, 0, 333)
+
+[node name="road_straight712" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -111, 0, 333)
+
+[node name="road_straight713" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -129, 0, 333)
+
+[node name="road_straight714" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -93, 0, 333)
+
+[node name="road_straight715" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -99, 0, 333)
+
+[node name="road_straight716" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -105, 0, 333)
+
+[node name="road_straight717" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -81, 0, 333)
+
+[node name="road_straight718" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -75, 0, 333)
+
+[node name="road_straight719" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -69, 0, 333)
+
+[node name="road_straight720" parent="Map/road" instance=ExtResource("16_wpnrn")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -87, 0, 333)
+
 [node name="road_straight147" parent="Map/road" instance=ExtResource("16_wpnrn")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 147, 0, -81)
 
