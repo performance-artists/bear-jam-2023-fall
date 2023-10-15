@@ -9,7 +9,7 @@ var show_it = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if GlobalTimer.value < 0:
+	if GlobalTimer.value < 0 or GlobalHealth.value <= 0:
 		if show_it:
 			points.text = "POINTS =  " + str(GlobalXP.value)
 			show_it = false

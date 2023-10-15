@@ -26,6 +26,7 @@ var turn_input = 0
 var using_skill = false
 var starting_running_sfx_volume
 var brake_sfx_timer = 0
+var prev_linear_velocity = [0, 0, 0]
 
 @export var brake_sfx_1: AudioStream
 @export var brake_sfx_2: AudioStream
@@ -37,8 +38,13 @@ func _ready():
 
 func _physics_process(delta):
 	car_mesh.position = sphere_offset
-	#if ground_ray.is_colliding():
-	apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
+	#Crash
+	if (abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1 < 0):
+		GlobalHealth.value -= abs(abs(linear_velocity.x) + abs(linear_velocity.z) - abs(prev_linear_velocity[0]) - abs(prev_linear_velocity[2]) + 1)
+	prev_linear_velocity = linear_velocity
+	#Move
+	if GlobalHealth.value > 0:
+		apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 	if speed_input != 0:
 		running_sfx_player.volume_db = starting_running_sfx_volume
 	else:
@@ -52,14 +58,10 @@ func _process(delta):
 		using_skill = false
 	#if not ground_ray.is_colliding():
 	#	return
-	if GlobalHealth.value > 0:
-		speed_input = Input.get_axis("ui_down", "ui_up") * acceleration
-		turn_input = Input.get_axis("ui_right", "ui_left") * deg_to_rad(steering)
-		right_wheel.rotation.y = turn_input
-		left_wheel.rotation.y = turn_input
-	else:
-		right_wheel.rotation.y = 0
-		left_wheel.rotation.y = 0
+	speed_input = Input.get_axis("ui_down", "ui_up") * acceleration
+	turn_input = Input.get_axis("ui_right", "ui_left") * deg_to_rad(steering)
+	right_wheel.rotation.y = turn_input
+	left_wheel.rotation.y = turn_input
 	
 	if turn_input and abs(linear_velocity.x) > 0.2 and abs(linear_velocity.z) > 0.2:
 		particle.emitting = true
