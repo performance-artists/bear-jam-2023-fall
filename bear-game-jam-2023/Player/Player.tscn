@@ -536,7 +536,6 @@ draw_pass_1 = SubResource("BoxMesh_gry60")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, -0.612372, 0.353553, 0, 0.5, 0.866025, -0.707107, -0.612372, 0.353553, 3, 6, 3)
-current = true
 script = ExtResource("6_w2o1n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
